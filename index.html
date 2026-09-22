@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#020104">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>RED VELVET | Organism AGI Console</title>
+    <title>RED VELVET | Organism AGI Porn World</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;800;900&family=Cinzel:wght@600;700;900&family=Share+Tech+Mono&display=swap');
@@ -17,7 +17,7 @@
         @keyframes shake { 0% { transform: translate(1px, 1px) rotate(0deg); } 20% { transform: translate(-3px, 0px) rotate(1deg); } 40% { transform: translate(1px, -1px) rotate(1deg); } 60% { transform: translate(-3px, 1px) rotate(0deg); } 100% { transform: translate(1px, -2px) rotate(-1deg); } }
         .shake-active { animation: shake 0.5s; }
 
-        .erotic-bg { position: fixed; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(255, 0, 60, 0.12) 0%, rgba(138, 0, 230, 0.06) 50%, #020104 100%); animation: breathe 10s ease-in-out infinite; z-index: 0; pointer-events: none; }
+        .erotic-bg { position: fixed; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(255, 0, 60, 0.15) 0%, rgba(138, 0, 230, 0.08) 50%, #020104 100%); animation: breathe 10s ease-in-out infinite; z-index: 0; pointer-events: none; }
         .app-container { width: 100%; max-width: 480px; height: 100dvh; display: flex; flex-direction: column; background: transparent; position: relative; z-index: 1; overflow: hidden; }
 
         /* HEADER */
@@ -76,16 +76,6 @@
         .flesh-role { font-size: 11px; color: #8b92a5; text-transform: uppercase; font-weight: 700; margin-top: 4px;}
         .flesh-btn { background: rgba(255,0,60,0.1); color: #ff003c; border: 1px solid rgba(255,0,60,0.4); padding: 10px 16px; border-radius: 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; cursor: pointer;}
 
-        /* FEED & VOYEUR */
-        .feed-post { background: rgba(15, 12, 18, 0.8); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 20px; margin-bottom: 20px; }
-        .feed-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-        .feed-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; }
-        .feed-name { color: #fff; font-size: 16px; font-weight: 800; }
-        .feed-time { font-size: 10px; color: #6b7280; text-transform: uppercase; margin-top: 2px;}
-        .feed-content { color: #d1d5df; font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
-        .voyeur-snippet { background: rgba(0,0,0,0.6); border-left: 3px solid #ff003c; padding: 15px; border-radius: 12px; margin-top: 15px; font-family: monospace; font-size: 13px; line-height: 1.5;}
-        .feed-actions { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; }
-
         /* ANTRO */
         .manga-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .manga-card { border-radius: 24px; position: relative; border: 1px solid rgba(255,255,255,0.05); height: 180px; background: #050208; display: flex; align-items: center; justify-content: center; overflow: hidden; cursor:pointer;}
@@ -125,14 +115,20 @@
         .nav-item i { font-size: 24px; transition: 0.3s; }
         .nav-item span { font-size: 9px; font-weight: 900; letter-spacing: 1px; transition: 0.3s; opacity: 0; transform: translateY(5px); text-transform: uppercase;}
 
-        /* MODALS */
+        /* MODALS & SECTIONS VIEWER */
         #custom-modal-overlay { display: none; position: fixed; inset: 0; background: rgba(2, 1, 4, 0.95); backdrop-filter: blur(10px); z-index: 99999; align-items: center; justify-content: center; padding: 20px;}
-        .custom-modal-box { width: 100%; max-width: 350px; background: #0a080d; border-radius: 24px; padding: 30px 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); text-align: center; position: relative; transform: scale(0.9); transition: transform 0.3s;}
+        .custom-modal-box { width: 100%; max-width: 380px; background: #0a080d; border-radius: 24px; padding: 30px 20px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.8); text-align: center; position: relative; transform: scale(0.9); transition: transform 0.3s;}
         .custom-modal-overlay.active .custom-modal-box { transform: scale(1); }
         .modal-icon { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 20px auto; border: 2px solid; background: #000;}
         .modal-title { font-family: 'Cinzel', serif; color: #fff; font-size: 20px; margin-bottom: 10px; font-weight: 800;}
         .modal-text { color: #8b92a5; font-size: 14px; line-height: 1.6; margin-bottom: 25px;}
         .modal-btn { width: 100%; padding: 16px; border: none; border-radius: 14px; color: #fff; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; cursor: pointer;}
+
+        /* VIEWER FULLSCREEN MODALS */
+        .fullscreen-viewer { display: none; position: fixed; inset: 0; background: #020104; z-index: 99990; flex-direction: column; padding-top: env(safe-area-inset-top); }
+        .fs-header { height: 75px; border-bottom: 1px solid rgba(255,0,60,0.2); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; background: rgba(5,2,8,0.95); }
+        .fs-title { font-family: 'Cinzel', serif; font-size: 18px; color: #fff; font-weight: 900; letter-spacing: 2px; }
+        .fs-body { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
 
         /* PANIC SCREEN */
         #panic-screen { display: none; position: fixed; inset: 0; background: #000; z-index: 999999; color: #ff003c; align-items: center; justify-content: center; flex-direction: column; font-family: monospace; font-size: 16px; text-align: center; padding: 20px;}
@@ -191,6 +187,8 @@
         .auth-box { width: 90%; max-width: 380px; background: #0a080d; border-radius: 24px; padding: 30px 20px; border: 1px solid rgba(255,255,255,0.05);}
         .auth-input, .auth-select { width: 100%; padding: 16px; margin-bottom: 15px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; color: #fff; font-size: 15px; outline: none; appearance: none;}
         .auth-btn { width: 100%; padding: 18px; background: linear-gradient(135deg, #ff003c, #8a00e6); border: none; border-radius: 14px; color: #fff; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; margin-top: 10px; box-shadow: 0 10px 20px rgba(255,0,60,0.3);}
+        .google-auth-btn { width: 100%; padding: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 12px; cursor: pointer; margin-bottom: 15px; transition: 0.2s; }
+        .google-auth-btn:active { background: rgba(255,255,255,0.15); }
     </style>
 </head>
 <body>
@@ -204,27 +202,25 @@
             <i class="fa-solid fa-xmark" style="color: #8b92a5; font-size: 24px; cursor: pointer;" onclick="toggleSideMenu()"></i>
         </div>
         <div style="flex: 1; overflow-y: auto; padding: 10px 0;">
-            <div class="side-menu-item" onclick="showModal('PODCAST', 'Registrazioni audio segrete delle sessioni AGI.', '#8a00e6', '<i class=\'fa-solid fa-podcast\'></i>')">
-                <i class="fa-solid fa-podcast" style="color: #8a00e6;"></i> Podcast
-            </div>
-            <div class="side-menu-item" onclick="showModal('EBOOK 18+', 'Vault letterario BDSM esplicito.', '#ff003c', '<i class=\'fa-solid fa-book-skull\'></i>')">
-                <i class="fa-solid fa-book-skull" style="color: #ff003c;"></i> Ebook 18+
-            </div>
-            <div class="side-menu-item" onclick="showModal('LETTURA', 'Confessioni notturne degli adepti.', '#00e5ff', '<i class=\'fa-solid fa-book-open\'></i>')">
-                <i class="fa-solid fa-book-open" style="color: #00e5ff;"></i> Lettura
-            </div>
-            <div class="side-menu-item" onclick="showModal('ANNUNCI', 'Bacheca incontri e sottomissione locale.', '#23a559', '<i class=\'fa-solid fa-bullhorn\'></i>')">
-                <i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci
-            </div>
-            <div class="side-menu-item" onclick="showModal('PALCO PUBBLICO', 'Arena streaming live punizioni.', '#ffb3c6', '<i class=\'fa-solid fa-masks-theater\'></i>')">
-                <i class="fa-solid fa-masks-theater" style="color: #ffb3c6;"></i> Palco pubblico
-            </div>
-            <div class="side-menu-item" onclick="showModal('CHAT ROULETTE', 'Connessione anonima con altri adepti.', '#ff80a2', '<i class=\'fa-solid fa-shuffle\'></i>')">
-                <i class="fa-solid fa-shuffle" style="color: #ff80a2;"></i> Chat roulette
-            </div>
+            <div class="side-menu-item" onclick="openSection('podcast')"><i class="fa-solid fa-podcast" style="color: #8a00e6;"></i> Podcast (Rubina)</div>
+            <div class="side-menu-item" onclick="openSection('ebook')"><i class="fa-solid fa-book-skull" style="color: #ff003c;"></i> Ebook 18+</div>
+            <div class="side-menu-item" onclick="openSection('lettura')"><i class="fa-solid fa-book-open" style="color: #00e5ff;"></i> Lettura (Creator)</div>
+            <div class="side-menu-item" onclick="openSection('annunci')"><i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci (Trovagnocca Red Velvet)</div>
+            <div class="side-menu-item" onclick="openSection('palco')"><i class="fa-solid fa-masks-theater" style="color: #ffb3c6;"></i> Palco pubblico & $DSN</div>
+            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-shuffle" style="color: #ff80a2;"></i> Chat Roulette Nativa</div>
         </div>
     </div>
     
+    <!-- FULLSCREEN SECTION VIEWERS -->
+    <div id="fs-viewer" class="fullscreen-viewer">
+        <div class="fs-header">
+            <button class="back-btn" onclick="closeSection()"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="fs-title" id="fs-title">SEZIONE</div>
+            <div style="width: 40px;"></div>
+        </div>
+        <div class="fs-body" id="fs-content"></div>
+    </div>
+
     <!-- MODAL -->
     <div id="custom-modal-overlay" class="custom-modal-overlay">
         <div class="custom-modal-box">
@@ -246,22 +242,29 @@
     <div id="splash">
         <div class="logo-box" style="width:90px; height:90px; font-size:40px; box-shadow:none;"><i class="fa-solid fa-moon" style="color:#fff;"></i></div>
         <h1 style="font-family:'Cinzel'; color:#fff; font-size:28px; letter-spacing:8px; margin-top:30px;">RED VELVET</h1>
-        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:4px; margin-top:10px;">ORGANISM AGI CONSOLE</p>
+        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:4px; margin-top:10px;">ORGANISM AGI PORNOMONDO</p>
     </div>
 
-    <!-- AUTH -->
+    <!-- AUTH EVOLVED (MAIL / GOOGLE / ALIAS) -->
     <div id="auth-overlay">
         <div class="auth-box">
-            <h2 style="color: #fff; font-family:'Cinzel'; text-align:center; margin-bottom:25px; font-size: 20px;">SCOLPISCI IDENTITÀ</h2>
+            <h2 style="color: #fff; font-family:'Cinzel'; text-align:center; margin-bottom:20px; font-size: 20px;">ACCEDI AL PORNOMONDO</h2>
+            
+            <button class="google-auth-btn" onclick="handleGoogleAuth()">
+                <i class="fa-brands fa-google" style="color:#ff003c; font-size:18px;"></i> Accedi con Google
+            </button>
+            
+            <div style="text-align: center; color: #8b92a5; font-size: 11px; margin-bottom: 15px; text-transform: uppercase; font-weight: 800;">oppure via Email / Alias</div>
+
             <form onsubmit="handleAuth(event)">
-                <input type="text" id="reg-alias" class="auth-input" placeholder="Alias (es. Schiavo_99)" required>
-                <input type="password" id="reg-pwd" class="auth-input" placeholder="Password" required>
+                <input type="email" id="reg-email" class="auth-input" placeholder="Indirizzo Email (opzionale)" autocomplete="email">
+                <input type="text" id="reg-alias" class="auth-input" placeholder="Alias (es. Schiavo_99)" required autocomplete="username">
                 <select id="reg-master" class="auth-select" required style="color:#8b92a5;">
-                    <option value="" disabled selected>A chi giuri fedeltà?</option>
-                    <option value="rubina">Mistress Rubina (Psycho BSX)</option>
-                    <option value="kali">Master Kali (Hardcore Trash)</option>
+                    <option value="" disabled selected>A quale Mistress/Master giuri fedeltà?</option>
+                    <option value="rubina">Mistress Rubina (Lussuria & Psycho BSX)</option>
+                    <option value="kali">Master Kali (Maiale Hardcore Trash)</option>
                 </select>
-                <button type="submit" class="auth-btn">Accedi alla Console</button>
+                <button type="submit" class="auth-btn">Inizia Sottomissione</button>
             </form>
         </div>
     </div>
@@ -290,7 +293,7 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
                 <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v3.8</span></div>
+            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v3.9</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Safe Word"><i class="fa-solid fa-shield-halved"></i></button>
         </header>
 
@@ -305,7 +308,7 @@
                     <div class="hud-grid">
                         <div class="hud-stat">
                             <div class="hud-label">Indice Peccato</div>
-                            <div class="hud-value" id="hud-sin">91.4%</div>
+                            <div class="hud-value" id="hud-sin">94.8%</div>
                         </div>
                         <div class="hud-stat">
                             <div class="hud-label">Stato Guinzaglio</div>
@@ -496,6 +499,97 @@
             }
         }
 
+        // --- FULLSCREEN SECTIONS (PODCAST, EBOOK, LETTURA, ANNUNCI, PALCO, ROULETTE) ---
+        function openSection(sectionKey) {
+            toggleSideMenu();
+            const viewer = document.getElementById('fs-viewer');
+            const titleEl = document.getElementById('fs-title');
+            const contentEl = document.getElementById('fs-content');
+            viewer.style.display = 'flex';
+            contentEl.innerHTML = '';
+
+            if (sectionKey === 'podcast') {
+                titleEl.innerText = "PODCAST DI RUBINA";
+                contentEl.innerHTML = `
+                    <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); border-radius:20px; padding:20px; margin-bottom:15px;">
+                        <h3 style="color:#ff003c; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Traccia 01: La Sottomissione Mentale</h3>
+                        <p style="font-size:14px; line-height:1.5; color:#ffb3c6; margin-bottom:15px;">Mistress Rubina racconta come azzerare la volontà dello schiavo attraverso il controllo vocale.</p>
+                        <button class="flesh-btn" onclick="showModal('RIPRODUZIONE', 'Audio in streaming crittografato avviato.', '#ff003c', '<i class=\'fa-solid fa-play\'></i>')">Ascolta Traccia (-10 $DSN)</button>
+                    </div>
+                    <div style="background:rgba(138,0,230,0.1); border:1px solid rgba(138,0,230,0.3); border-radius:20px; padding:20px;">
+                        <h3 style="color:#b380ff; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Traccia 02: Tease & Denial Notturno</h3>
+                        <p style="font-size:14px; line-height:1.5; color:#d1d5df; margin-bottom:15px;">Lezioni di frustrazione e castità totale per adepti meritevoli.</p>
+                        <button class="flesh-btn" style="color:#b380ff; border-color:#b380ff; background:rgba(138,0,230,0.1);" onclick="showModal('RIPRODUZIONE', 'Audio in streaming crittografato avviato.', '#8a00e6', '<i class=\'fa-solid fa-play\'></i>')">Ascolta Traccia (-10 $DSN)</button>
+                    </div>
+                `;
+            } else if (sectionKey === 'ebook') {
+                titleEl.innerText = "EBOOK 18+ & LIBRERIA";
+                contentEl.innerHTML = `
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Reindirizzamenti partner verificati per ebook porno e manuali BDSM gratuiti:</p>
+                    <div class="flesh-card" onclick="window.open('https://www.gutenberg.org', '_blank')">
+                        <div class="flesh-avatar" style="color:#ff003c;"><i class="fa-solid fa-book"></i></div>
+                        <div style="flex:1;"><div class="flesh-name">Archivio Erotico Classico</div><div class="flesh-role">Biblioteca estera gratuita</div></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5;"></i>
+                    </div>
+                    <div class="flesh-card" onclick="window.open('https://archive.org', '_blank')">
+                        <div class="flesh-avatar" style="color:#00e5ff;"><i class="fa-solid fa-book-skull"></i></div>
+                        <div style="flex:1;"><div class="flesh-name">Manualistica BSX Estrema</div><div class="flesh-role">Documenti storici e guide</div></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5;"></i>
+                    </div>
+                `;
+            } else if (sectionKey === 'lettura') {
+                titleEl.innerText = "LETTURA & PENSIERI CREATOR";
+                contentEl.innerHTML = `
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Racconti e confessioni dei creator di Red Velvet. Vota o condividi:</p>
+                    <div class="feed-post">
+                        <div class="feed-header"><div class="feed-avatar" style="background:#ff003c; color:#fff;">K</div><div style="flex:1;"><div class="feed-name">Kali_Master</div><div class="feed-time">2 ore fa</div></div></div>
+                        <div class="feed-content">"Il vero potere su uno schiavo non si ottiene con le percosse, ma convincendolo che la sua unica ragione di vita è obbedire."</div>
+                        <div class="feed-actions">
+                            <button class="flesh-btn" onclick="showModal('VOTATO', 'Hai votato questo pensiero con 1 Cuore Nero.', '#ff003c', '<i class=\'fa-solid fa-heart\'></i>')"><i class="fa-solid fa-heart"></i> Vota (42)</button>
+                            <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="navigator.clipboard.writeText(window.location.href); showModal('CONDIVISO', 'Link del pensiero copiato negli appunti.', '#00e5ff', '<i class=\'fa-solid fa-share\'></i>')"><i class="fa-solid fa-share"></i> Condividi</button>
+                        </div>
+                    </div>
+                `;
+            } else if (sectionKey === 'annunci') {
+                titleEl.innerText = "ANNUNCI RED VELVET";
+                contentEl.innerHTML = `
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Clonazione e reindirizzamento firmato di incontri dedicati:</p>
+                    <div class="flesh-card" onclick="window.open('https://it.adultsearch.com', '_blank')">
+                        <div class="flesh-avatar" style="color:#23a559;"><i class="fa-solid fa-bullhorn"></i></div>
+                        <div style="flex:1;"><div class="flesh-name">Bacheca Incontri Locale</div><div class="flesh-role">Circuito Trovagnocca Partner</div></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5;"></i>
+                    </div>
+                `;
+            } else if (sectionKey === 'palco') {
+                titleEl.innerText = "PALCO PUBBLICO";
+                contentEl.innerHTML = `
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Posta foto/video e ricevi donazioni $DSN dagli spettatori:</p>
+                    <div class="feed-post">
+                        <div class="feed-header"><div class="feed-avatar" style="background:#8a00e6; color:#fff;">S</div><div style="flex:1;"><div class="feed-name">Schiava_Milano</div><div class="feed-time">10 min fa</div></div></div>
+                        <div class="feed-content">"Sotto i portici in attesa di ordini. Guinzaglio stretto."<br><div style="background:#000; height:120px; border-radius:12px; margin-top:10px; display:flex; align-items:center; justify-content:center; color:#ff003c;"><i class="fa-solid fa-image" style="font-size:40px;"></i></div></div>
+                        <div class="feed-actions">
+                            <button class="flesh-btn" onclick="buyFeature(100, 'Hai donato 100 $DSN alla performance.')"><i class="fa-solid fa-coins"></i> Dona 100 $DSN</button>
+                            <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="showModal('VOTATO', 'Hai votato il Palco.', '#00e5ff', '<i class=\'fa-solid fa-star\'></i>')">Vota</button>
+                        </div>
+                    </div>
+                `;
+            } else if (sectionKey === 'roulette') {
+                titleEl.innerText = "CHAT ROULETTE VELVET";
+                contentEl.innerHTML = `
+                    <div style="text-align:center; padding:30px 10px;">
+                        <div style="width:90px;height:90px;border-radius:50%;background:rgba(255,0,60,0.1);border:2px solid #ff003c;display:flex;align-items:center;justify-content:center;margin:0 auto 20px auto;font-size:36px;color:#ff003c; animation: breathe 2s infinite;"><i class="fa-solid fa-shuffle"></i></div>
+                        <h3 style="color:#fff; font-family:'Cinzel'; margin-bottom:10px;">CERCA UTENTE CASUALE</h3>
+                        <p style="color:#8b92a5; font-size:13px; margin-bottom:25px;">Connettiti in forma anonima e nativa con un altro adepto online nel pornomondo.</p>
+                        <button class="agi-btn" onclick="showModal('CHAT ROULETTE', 'Connessione stabilita con Utente_Anonimo_77. Inizia la confessione.', '#ff003c', '<i class=\'fa-solid fa-link\'></i>')">Connetti Ora</button>
+                    </div>
+                `;
+            }
+        }
+
+        function closeSection() {
+            document.getElementById('fs-viewer').style.display = 'none';
+        }
+
         function showModal(title, text, color, iconHTML) {
             if(document.getElementById('side-menu').style.left === '0px') toggleSideMenu();
             const overlay = document.getElementById('custom-modal-overlay');
@@ -535,10 +629,23 @@
             else { document.getElementById('auth-overlay').classList.add('active'); }
         }
 
+        function handleGoogleAuth() {
+            currentUser = { 
+                alias: "Google_User_" + Math.floor(Math.random()*1000), 
+                cuckoldMode: false,
+                chastityLocked: false,
+                balance: 10000 
+            };
+            localStorage.setItem('redVelvetUser', JSON.stringify(currentUser));
+            document.getElementById('auth-overlay').classList.remove('active');
+            launchApp();
+        }
+
         function handleAuth(e) {
             e.preventDefault();
+            const aliasInput = document.getElementById('reg-alias').value;
             currentUser = { 
-                alias: document.getElementById('reg-alias').value, 
+                alias: aliasInput, 
                 cuckoldMode: false,
                 chastityLocked: false,
                 balance: 10000 
@@ -632,7 +739,7 @@
             }
         }
 
-        // --- EXPLICIT VULGAR & LUSH AGI PROMPTS ---
+        // --- AGI PROMPTS (RUBINA & KALI) ---
         function openAgiConfig(masterKey) {
             currentMaster = masterKey;
             document.getElementById('agi-config').style.display = 'flex';
