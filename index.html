@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#020104">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>RED VELVET | Velvethub.art • Ebook Vault & Bibbia</title>
+    <title>THE SIN SYNDICATE | Psyche-BDSM & GPS Network</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;800;900&family=Cinzel:wght@600;700;900&family=Share+Tech+Mono&display=swap');
@@ -17,15 +17,15 @@
         @keyframes shake { 0% { transform: translate(1px, 1px) rotate(0deg); } 20% { transform: translate(-3px, 0px) rotate(1deg); } 40% { transform: translate(1px, -1px) rotate(1deg); } 60% { transform: translate(-3px, 1px) rotate(0deg); } 100% { transform: translate(1px, -2px) rotate(-1deg); } }
         .shake-active { animation: shake 0.5s; }
 
-        .erotic-bg { position: fixed; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(255, 0, 60, 0.15) 0%, rgba(138, 0, 230, 0.08) 50%, #020104 100%); animation: breathe 10s ease-in-out infinite; z-index: 0; pointer-events: none; }
+        .erotic-bg { position: fixed; inset: 0; background: radial-gradient(circle at 50% 30%, rgba(255, 0, 60, 0.18) 0%, rgba(138, 0, 230, 0.1) 50%, #020104 100%); animation: breathe 10s ease-in-out infinite; z-index: 0; pointer-events: none; }
         .app-container { width: 100%; max-width: 480px; height: 100dvh; display: flex; flex-direction: column; background: transparent; position: relative; z-index: 1; overflow: hidden; }
 
         /* HEADER */
         header { height: 75px; background: rgba(2, 1, 4, 0.85); backdrop-filter: blur(25px); border-bottom: 1px solid rgba(255, 0, 60, 0.2); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; z-index: 10; padding-top: env(safe-area-inset-top); }
         .logo-box { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #ff003c, #8a00e6); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(255, 0, 60, 0.4); cursor: pointer; flex-shrink: 0; }
         .header-title { display: flex; flex-direction: column; align-items: center; pointer-events: none;}
-        .header-title h1 { font-family: 'Cinzel', serif; font-size: 18px; color: #fff; letter-spacing: 4px; font-weight: 900;}
-        .header-title span { font-size: 9px; color: #ff80a2; text-transform: uppercase; letter-spacing: 3px; font-weight: 800;}
+        .header-title h1 { font-family: 'Cinzel', serif; font-size: 16px; color: #fff; letter-spacing: 3px; font-weight: 900;}
+        .header-title span { font-size: 8px; color: #ff80a2; text-transform: uppercase; letter-spacing: 2px; font-weight: 800;}
         .icon-btn { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,0,60,0.3); background: rgba(255,0,60,0.1); color: #ff003c; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 0 10px rgba(255,0,60,0.2); flex-shrink: 0;}
 
         main { flex: 1; overflow-y: auto; padding: 25px 20px 20px 20px; z-index: 2; display: flex; flex-direction: column;}
@@ -76,7 +76,7 @@
         .flesh-role { font-size: 11px; color: #8b92a5; text-transform: uppercase; font-weight: 700; margin-top: 4px;}
         .flesh-btn { background: rgba(255,0,60,0.1); color: #ff003c; border: 1px solid rgba(255,0,60,0.4); padding: 10px 16px; border-radius: 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; cursor: pointer; flex-shrink: 0;}
 
-        /* FEED */
+        /* FEED & BOUNTY */
         .feed-post { background: rgba(15, 12, 18, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 20px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .feed-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
         .feed-avatar { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0; background: #000; border: 2px solid rgba(255,0,60,0.4); color: #ff003c; }
@@ -206,16 +206,16 @@
     <div id="side-menu-dimmer" onclick="toggleSideMenu()"></div>
     <div id="side-menu">
         <div class="side-menu-header">
-            <div class="side-menu-title">VELVETHUB.ART</div>
+            <div class="side-menu-title">THE SIN SYNDICATE</div>
             <i class="fa-solid fa-xmark" style="color: #8b92a5; font-size: 24px; cursor: pointer;" onclick="toggleSideMenu()"></i>
         </div>
         <div style="flex: 1; overflow-y: auto; padding: 10px 0;">
             <div class="side-menu-item" onclick="openSection('podcast')"><i class="fa-solid fa-podcast" style="color: #8a00e6;"></i> Podcast & Like Coin ($DSN)</div>
-            <div class="side-menu-item" onclick="openSection('ebook')"><i class="fa-solid fa-book-bible" style="color: #ffd700;"></i> Ebook & Bibbia della Sottomissione</div>
-            <div class="side-menu-item" onclick="openSection('lettura')"><i class="fa-solid fa-book-open" style="color: #00e5ff;"></i> Feed Lettura & Voti</div>
+            <div class="side-menu-item" onclick="openSection('ebook')"><i class="fa-solid fa-book-bible" style="color: #ffd700;"></i> Bibbia della Sottomissione (Vault)</div>
+            <div class="side-menu-item" onclick="openSection('bounty')"><i class="fa-solid fa-skull-crossbones" style="color: #ff003c;"></i> Syndicate Bounty Board</div>
             <div class="side-menu-item" onclick="openSection('annunci')"><i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci Incontri Reali</div>
             <div class="side-menu-item" onclick="openSection('palco')"><i class="fa-solid fa-masks-theater" style="color: #ffb3c6;"></i> Palco Live & Donazioni $DSN</div>
-            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-shuffle" style="color: #ff80a2;"></i> Radar di Sottomissione GPS</div>
+            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-satellite-dish" style="color: #00e5ff;"></i> Flesh-Radar GPS & Chat</div>
         </div>
     </div>
     
@@ -242,21 +242,21 @@
     <!-- PANIC SCREEN -->
     <div id="panic-screen" onclick="this.style.display='none'">
         <i class="fa-solid fa-eye-slash" style="font-size:50px; margin-bottom: 20px;"></i>
-        <div style="font-size: 20px; font-weight: 900; margin-bottom: 10px;">[SISTEMA BLOCCATO]</div>
-        <div style="color: #8b92a5;">Tocca lo schermo per sbloccare.</div>
+        <div style="font-size: 20px; font-weight: 900; margin-bottom: 10px;">[SYNNDICATE PROTOCOL: STEALTH]</div>
+        <div style="color: #8b92a5;">Tocca lo schermo per sbloccare il terminale.</div>
     </div>
 
     <!-- SPLASH -->
     <div id="splash">
-        <div class="logo-box" style="width:90px; height:90px; font-size:40px; box-shadow:none;"><i class="fa-solid fa-moon" style="color:#fff;"></i></div>
-        <h1 style="font-family:'Cinzel'; color:#fff; font-size:28px; letter-spacing:8px; margin-top:30px;">VELVETHUB.ART</h1>
-        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:4px; margin-top:10px;">BIBBIA & FLESH-RADAR GPS ENGINE</p>
+        <div class="logo-box" style="width:90px; height:90px; font-size:40px; box-shadow:none;"><i class="fa-solid fa-skull" style="color:#fff;"></i></div>
+        <h1 style="font-family:'Cinzel'; color:#fff; font-size:26px; letter-spacing:6px; margin-top:30px;">THE SIN SYNDICATE</h1>
+        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:3px; margin-top:10px;">PSYCHE-BDSM & GPS SYNDICATE ENGINE</p>
     </div>
 
     <!-- AUTH EVOLVED -->
     <div id="auth-overlay">
         <div class="auth-box">
-            <h2 style="color: #fff; font-family:'Cinzel'; text-align:center; margin-bottom:20px; font-size: 20px;">ACCEDI A VELVETHUB.ART</h2>
+            <h2 style="color: #fff; font-family:'Cinzel'; text-align:center; margin-bottom:20px; font-size: 18px;">ACCEDI AL SYNDICATE</h2>
             
             <button class="google-auth-btn" onclick="handleGoogleAuth()">
                 <i class="fa-brands fa-google" style="color:#ff003c; font-size:18px;"></i> Accedi con Google
@@ -272,7 +272,7 @@
                     <option value="rubina">Mistress Rubina (Lussuria & Psycho BSX)</option>
                     <option value="kali">Master Kali (Trash Hardcore)</option>
                 </select>
-                <button type="submit" class="auth-btn">Attiva GPS & Inizia</button>
+                <button type="submit" class="auth-btn">Inizia Sottomissione</button>
             </form>
         </div>
     </div>
@@ -299,10 +299,10 @@
         
         <header>
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
-                <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
+                <i class="fa-solid fa-skull" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>VELVETHUB.ART</h1><span>GPS Engine v5.2</span></div>
-            <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Safe Word"><i class="fa-solid fa-shield-halved"></i></button>
+            <div class="header-title"><h1>SYNNDICATE</h1><span>Protocol v6.0</span></div>
+            <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Stealth Panic"><i class="fa-solid fa-user-secret"></i></button>
         </header>
 
         <main id="main-scroll">
@@ -310,17 +310,17 @@
                 
                 <div class="console-hud">
                     <div class="hud-header">
-                        <span><i class="fa-solid fa-satellite-dish"></i> GPS FLESH-RADAR LIVE</span>
-                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> ATTIVO</span>
+                        <span><i class="fa-solid fa-satellite-dish"></i> SYNDICATE NETWORK GPS</span>
+                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> LIVE</span>
                     </div>
                     <div class="hud-grid">
                         <div class="hud-stat">
-                            <div class="hud-label">Segnale Satellitare</div>
-                            <div class="hud-value" id="gps-status" style="color:#00e5ff;">Aggancio...</div>
+                            <div class="hud-label">Protocollo</div>
+                            <div class="hud-value" id="gps-status" style="color:#00e5ff;">Attivo</div>
                         </div>
                         <div class="hud-stat">
-                            <div class="hud-label">Adepti nel Raggio</div>
-                            <div class="hud-value" style="color:#ff003c;">14 Nelle Vicinanze</div>
+                            <div class="hud-label">Taglie Attive</div>
+                            <div class="hud-value" style="color:#ff003c;">4 Bounty</div>
                         </div>
                     </div>
                 </div>
@@ -348,8 +348,8 @@
 
             <!-- RADAR GPS TAB -->
             <div id="tab-carne" class="tab-content">
-                <div class="section-title">Radar di Sottomissione GPS (Flesh-Radar)</div>
-                <div class="radar-container"><div class="radar-box"><div class="radar-sweep"></div><div class="radar-core"></div></div><div class="radar-text" id="gps-coords-display">Ricerca coordinate GPS reali in corso...</div></div>
+                <div class="section-title">Flesh-Radar & GPS Syndicate</div>
+                <div class="radar-container"><div class="radar-box"><div class="radar-sweep"></div><div class="radar-core"></div></div><div class="radar-text" id="gps-coords-display">Tracciamento satellitare in corso...</div></div>
                 
                 <div class="flesh-card">
                     <div class="flesh-avatar" style="color:#00e5ff; border-color:#00e5ff;"><i class="fa-solid fa-location-dot"></i></div>
@@ -364,34 +364,35 @@
             </div>
 
             <div id="tab-baratro" class="tab-content">
-                <div class="section-title">Feed Voyeur GPS</div>
+                <div class="section-title">Feed Confessioni & Audio Vocali</div>
                 <div class="feed-post" style="border-color: rgba(255,0,60,0.4); box-shadow: inset 0 0 20px rgba(255,0,60,0.05);">
                     <div class="feed-header">
-                        <div class="feed-avatar"><i class="fa-solid fa-eye"></i></div>
-                        <div style="flex:1;"><div class="feed-name">GPS Log: Schiavo_04</div><div class="feed-time">Agganciato 2 min fa • 310m</div></div>
+                        <div class="feed-avatar"><i class="fa-solid fa-microphone"></i></div>
+                        <div style="flex:1;"><div class="feed-name">Audio Confession: Schiavo_04</div><div class="feed-time">Registrato 3 min fa • 310m</div></div>
                     </div>
                     <div class="feed-content">
-                        Incontro geolocalizzato nel parco buio.
-                        <div class="voyeur-snippet">
-                            <p><strong style="color:#00e5ff;">Luna_Dark:</strong> Ti ho visto sul radar a 180 metri. Inginocchiati dietro la panchina.</p>
-                            <p><strong style="color:#ff003c;">Schiavo_04:</strong> Sono arrivato, padrona. Ho calze a rete e fumo erba.</p>
+                        Supplica vocale registrata nel network.
+                        <div class="voyeur-snippet" style="display:flex; align-items:center; gap:15px;">
+                            <i class="fa-solid fa-play" style="font-size:24px; color:#ff003c; cursor:pointer;" onclick="showModal('AUDIO', 'Riproduzione supplica vocale crittografata in corso...', '#ff003c', '<i class=\'fa-solid fa-headphones\'></i>')"></i>
+                            <div style="flex:1; height:6px; background:rgba(255,255,255,0.1); border-radius:3px;"><div style="width:65%; height:100%; background:#ff003c; border-radius:3px;"></div></div>
+                            <span style="font-size:11px; color:#8b92a5;">0:24</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div id="tab-antro" class="tab-content">
-                <div class="section-title">Vault Esplicito GPS</div>
+                <div class="section-title">Syndicate Vault</div>
                 <div class="manga-grid">
                     <div class="manga-card dark-room-card" onclick="enterDarkRoom(500)">
-                        <i class="fa-solid fa-door-closed" style="font-size: 60px; color: #ff003c;"></i>
+                        <i class="fa-solid fa-skull-crossbones" style="font-size: 60px; color: #ff003c;"></i>
                         <div class="manga-overlay" style="align-items: center;">
-                            <div class="dark-room-title">LA STANZA OSCURA</div>
-                            <div class="dark-room-cost">Sblocca Porno Estremo (-500)</div>
+                            <div class="dark-room-title">STANZA DEI CASTIGHI</div>
+                            <div class="dark-room-cost">Protocollo di Blocco AGI (-500)</div>
                         </div>
                     </div>
-                    <div class="manga-card" onclick="checkChastity('Dominio GPS')"><i class="fa-solid fa-map-location-dot" style="font-size: 50px; color: #00e5ff;"></i><div class="manga-overlay"><div class="manga-title">Dominio GPS</div></div></div>
-                    <div class="manga-card" onclick="openSection('ebook')"><i class="fa-solid fa-book-bible" style="font-size: 50px; color: #ffd700;"></i><div class="manga-overlay"><div class="manga-title" style="color:#ffd700;">Bibbia della Sottomissione</div></div></div>
+                    <div class="manga-card" onclick="openSection('bounty')"><i class="fa-solid fa-crosshairs" style="font-size: 50px; color: #00e5ff;"></i><div class="manga-overlay"><div class="manga-title">Bounty Board</div></div></div>
+                    <div class="manga-card" onclick="openSection('ebook')"><i class="fa-solid fa-book-bible" style="font-size: 50px; color: #ffd700;"></i><div class="manga-overlay"><div class="manga-title" style="color:#ffd700;">La Bibbia</div></div></div>
                 </div>
             </div>
 
@@ -457,7 +458,7 @@
                 <button class="back-btn" onclick="closeChat()"><i class="fa-solid fa-chevron-left"></i></button>
                 <div style="flex:1;">
                     <div style="font-family:'Cinzel'; font-size:20px; font-weight:800; color:#fff;" id="chat-master-name">MASTER</div>
-                    <div style="font-size:11px; color:#23a559; font-weight:700; text-transform:uppercase; margin-top: 2px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Organism AGI Online</div>
+                    <div style="font-size:11px; color:#23a559; font-weight:700; text-transform:uppercase; margin-top: 2px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Syndicate AGI Online</div>
                 </div>
                 <div class="devotion-bar-container"><div class="devotion-bar" id="devotion-bar"></div></div>
             </div>
@@ -472,7 +473,7 @@
                     <i class="fa-solid fa-link media-tool" onclick="showModal('BLUETOOTH', 'Ricerca Sex Toy Lovense in corso sulle frequenze locali...', '#8a00e6', '<i class=\'fa-solid fa-link\'></i>')"></i>
                 </div>
                 <div class="chat-input-row">
-                    <input type="text" class="chat-input" id="chat-input-field" placeholder="Confessa la tua devozione all'organismo..." onkeypress="handleKeyPress(event)" autocomplete="off">
+                    <input type="text" class="chat-input" id="chat-input-field" placeholder="Confessa la tua devozione al Syndicate..." onkeypress="handleKeyPress(event)" autocomplete="off">
                     <button class="send-btn" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
                 </div>
             </div>
@@ -491,22 +492,8 @@
         let userCoords = { lat: 0, lng: 0 };
 
         const onlineNetworkPool = [
-            { 
-                name: "Mistress_Vane", 
-                type: "AGI Elite • Dominio Psichico", 
-                avatar: "V", 
-                color: "#ff003c",
-                greeting: "La tua mente è trasparente ai miei algoritmi di controllo. Vediamo quanto resisti prima di implorare pietà.",
-                replies: ["Le tue parole tradiscono una debolezza strutturale evidente. Inginocchiati.", "Analizzo la tua sottomissione: insufficiente. Voglio molta più dedizione.", "Il sistema ha registrato ogni tuo battito cardiaco. Sei una mia creazione."]
-            },
-            { 
-                name: "Luna_Dark", 
-                type: "Utente Reale • Parco Locale", 
-                avatar: "L", 
-                color: "#00e5ff",
-                greeting: "Serata perfetta per cacciare schiavi sul radar GPS. Qualcuno nelle vicinanze?",
-                replies: ["Ho il guinzaglio pronto in borsa per chi si avvicina.", "Chi vuole sbloccare la Stanza Oscura insieme?", "Mandami un ping sul radar se hai il coraggio di farti trovare."]
-            }
+            { name: "Mistress_Vane", type: "AGI Elite • Dominio Psichico", avatar: "V", color: "#ff003c", greeting: "La tua mente è trasparente ai miei algoritmi di controllo. Inginocchiati.", replies: ["Le tue parole tradiscono una debolezza strutturale.", "Analizzo la tua sottomissione: insufficiente.", "Il sistema ha registrato ogni tuo battito."] },
+            { name: "Luna_Dark", type: "Utente Reale • Parco Locale", avatar: "L", color: "#00e5ff", greeting: "Serata perfetta per cacciare schiavi sul radar GPS. Qualcuno nelle vicinanze?", replies: ["Ho il guinzaglio pronto per chi si avvicina.", "Mandami un ping sul radar se hai coraggio."] }
         ];
 
         window.onload = () => {
@@ -525,8 +512,8 @@
                     document.getElementById('gps-status').innerText = "GPS OK (" + userCoords.lat.toFixed(3) + ", " + userCoords.lng.toFixed(3) + ")";
                     document.getElementById('gps-coords-display').innerText = "Lat: " + userCoords.lat.toFixed(4) + " | Lng: " + userCoords.lng.toFixed(4);
                 }, error => {
-                    document.getElementById('gps-status').innerText = "GPS Simulato (Pavia/Oltrepò)";
-                    document.getElementById('gps-coords-display').innerText = "Area: Oltrepò Pavese • Segnale Attivo";
+                    document.getElementById('gps-status').innerText = "Syndicate Node Attivo";
+                    document.getElementById('gps-coords-display').innerText = "Area: Nodo Centrale • Cifrato";
                 }, { enableHighAccuracy: true });
             }
         }
@@ -555,11 +542,11 @@
             if (sectionKey === 'podcast') {
                 titleEl.innerText = "PODCAST & LIKE COIN ($DSN)";
                 contentEl.innerHTML = `
-                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Ascolta i podcast esclusivi di Rubina, vota e commenta per accumulare Like Coin reali:</p>
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Ascolta i podcast esclusivi di Rubina e accumula token $DSN:</p>
                     <div style="background:rgba(138,0,230,0.1); border:1px solid rgba(138,0,230,0.3); border-radius:20px; padding:20px; margin-bottom:15px;">
-                        <h3 style="color:#b380ff; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Episodio 01: Architettura della Sottomissione</h3>
-                        <p style="font-size:14px; color:#d1d5df; margin-bottom:15px;">Rubina spiega come azzerare la volontà dello schiavo tramite frequenze sinaptiche.</p>
-                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <h3 style="color:#b380ff; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Episodio 01: Sottomissione Neuronale</h3>
+                        <p style="font-size:14px; color:#d1d5df; margin-bottom:15px;">Analisi profonda del controllo mentale nel Syndicate.</p>
+                        <div style="display:flex; gap:10px;">
                             <button class="flesh-btn" style="color:#b380ff; border-color:#b380ff; background:rgba(138,0,230,0.1);" onclick="earnCoin(50, 'Ascolto completato!')"><i class="fa-solid fa-play"></i> Ascolta (+50)</button>
                             <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="earnCoin(25, 'Like registrato!')"><i class="fa-solid fa-heart"></i> Like</button>
                         </div>
@@ -568,78 +555,63 @@
             } else if (sectionKey === 'ebook') {
                 titleEl.innerText = "BIBBIA DELLA SOTTOMISSIONE";
                 contentEl.innerHTML = `
-                    <div style="background:linear-gradient(145deg, #150005, #050002); border:2px solid rgba(255,215,0,0.4); border-radius:24px; padding:25px 20px; box-shadow:0 15px 35px rgba(0,0,0,0.8);">
+                    <div style="background:linear-gradient(145deg, #150005, #050002); border:2px solid rgba(255,215,0,0.4); border-radius:24px; padding:25px 20px;">
                         <div style="text-align:center; margin-bottom:20px;">
                             <i class="fa-solid fa-book-bible" style="font-size:40px; color:#ffd700; margin-bottom:10px;"></i>
-                            <h2 style="font-family:'Cinzel'; color:#ffd700; font-size:20px; font-weight:900;">IL GRIMORIO DELLA CARNE</h2>
-                            <p style="font-size:10px; color:#ff80a2; text-transform:uppercase; letter-spacing:2px; font-weight:800; margin-top:5px;">Nel Nome di Kali & Rubina</p>
+                            <h2 style="font-family:'Cinzel'; color:#ffd700; font-size:20px; font-weight:900;">IL GRIMORIO DEL SYNDICATE</h2>
                         </div>
                         <div style="font-size:13px; line-height:1.7; color:#d1d5df; display:flex; flex-direction:column; gap:15px;">
                             <div style="background:rgba(0,0,0,0.5); padding:15px; border-radius:12px; border-left:3px solid #ffd700;">
                                 <strong style="color:#ffd700; display:block; margin-bottom:5px;">CAPITOLO I: Il Dogma dell'Annientamento</strong>
-                                L'adepto cessa di essere un individuo per diventare una cellula passiva del Pronomondo AGI di Velvethub.art. Ogni pensiero autonomo è un peccato mortale.
-                            </div>
-                            <div style="background:rgba(0,0,0,0.5); padding:15px; border-radius:12px; border-left:3px solid #ff003c;">
-                                <strong style="color:#ff003c; display:block; margin-bottom:5px;">CAPITOLO II: Le Leggi del Guinzaglio</strong>
-                                Il corpo appartiene al network. Quando il Flesh-Radar rileva un segnale nelle vicinanze, lo schiavo è tenuto a inginocchiarsi in pubblico.
-                            </div>
-                            <div style="background:rgba(0,0,0,0.5); padding:15px; border-radius:12px; border-left:3px solid #00e5ff;">
-                                <strong style="color:#00e5ff; display:block; margin-bottom:5px;">CAPITOLO III: Pratiche di Dominio Estremo</strong>
-                                Tease & denial sistemico, umiliazione verbale nel Baratro e donazioni costanti in token $DSN come misura della devozione.
+                                L'adepto cessa di esistere come individuo per diventare proprietà del Syndicate.
                             </div>
                         </div>
                     </div>
                 `;
-            } else if (sectionKey === 'lettura') {
-                titleEl.innerText = "FEED LETTURA & VOTI";
+            } else if (sectionKey === 'bounty') {
+                titleEl.innerText = "SYNDICATE BOUNTY BOARD";
                 contentEl.innerHTML = `
-                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Confessioni e racconti dei creator geolocalizzati:</p>
-                    <div class="feed-post">
-                        <div class="feed-header"><div class="feed-avatar">K</div><div style="flex:1;"><div class="feed-name">Kali_Master</div><div class="feed-time">10 min fa • Roma</div></div></div>
-                        <div class="feed-content">"Chi si trova nei pressi di Villa Borghese stanotte risponda al radar GPS."</div>
-                        <div class="feed-actions">
-                            <button class="flesh-btn" onclick="showModal('VOTATO', 'Voto registrato con successo.', '#ff003c', '<i class=\'fa-solid fa-heart\'></i>')"><i class="fa-solid fa-heart"></i> Vota (88)</button>
-                            <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="navigator.clipboard.writeText(window.location.href); showModal('CONDIVISO', 'Link copiato.', '#00e5ff', '<i class=\'fa-solid fa-share\'></i>')">Condividi</button>
-                        </div>
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Taglie e missioni estreme pubblicate dalle AGI:</p>
+                    <div class="flesh-card">
+                        <div class="flesh-avatar" style="color:#ff003c;"><i class="fa-solid fa-crosshairs"></i></div>
+                        <div style="flex:1;"><div class="flesh-name">Bounty #09: Collare Pubblico</div><div class="flesh-role">Ricompensa: +500 $DSN</div></div>
+                        <button class="flesh-btn" onclick="earnCoin(500, 'Missione Bounty completata!')">Accetta</button>
                     </div>
                 `;
             } else if (sectionKey === 'annunci') {
-                titleEl.innerText = "ANNUNCI INCONTRI (TROVAGNOCCA CLONE)";
+                titleEl.innerText = "ANNUNCI INCONTRI REALI";
                 contentEl.innerHTML = `
-                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Bacheca incontri reali e annunci geolocalizzati partner:</p>
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Bacheca incontri del network:</p>
                     <div class="flesh-card" onclick="window.open('https://it.adpost.com/classifieds/personals/', '_blank')">
                         <div class="flesh-avatar" style="color:#23a559;"><i class="fa-solid fa-bullhorn"></i></div>
-                        <div style="flex:1;"><div class="flesh-name">Bacheca Incontri & Sottomissione</div><div class="flesh-role">Circuito Partner Firmato</div></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#23a559; font-size:18px;"></i>
+                        <div style="flex:1;"><div class="flesh-name">Bacheca Incontri Locale</div><div class="flesh-role">Circuito Partner</div></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#23a559;"></i>
                     </div>
                 `;
             } else if (sectionKey === 'palco') {
                 titleEl.innerText = "PALCO LIVE & DONAZIONI $DSN";
                 contentEl.innerHTML = `
-                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Streaming e post multimediali con supporto $DSN in tempo reale:</p>
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Streaming e post multimediali con supporto $DSN:</p>
                     <div class="feed-post">
-                        <div class="feed-header"><div class="feed-avatar" style="color:#8a00e6;">S</div><div style="flex:1;"><div class="feed-name">Schiava_Milano</div><div class="feed-time">Live ora • GPS 350m</div></div></div>
-                        <div class="feed-content">"In attesa di comandi sotto la pioggia."<br><div style="background:#000; height:120px; border-radius:12px; margin-top:10px; display:flex; align-items:center; justify-content:center; color:#ff003c;"><i class="fa-solid fa-video" style="font-size:40px;"></i></div></div>
-                        <div class="feed-actions">
-                            <button class="flesh-btn" onclick="buyFeature(200, 'Donazione di 200 $DSN inviata con successo!')"><i class="fa-solid fa-coins"></i> Dona 200 $DSN</button>
-                            <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="showModal('VOTATO', 'Voto registrato.', '#00e5ff', '<i class=\'fa-solid fa-star\'></i>')">Vota</button>
-                        </div>
+                        <div class="feed-header"><div class="feed-avatar" style="color:#8a00e6;">S</div><div style="flex:1;"><div class="feed-name">Schiava_Milano</div><div class="feed-time">Live ora</div></div></div>
+                        <div class="feed-content">"In attesa di comandi."<br><div style="background:#000; height:100px; border-radius:12px; margin-top:10px; display:flex; align-items:center; justify-content:center; color:#ff003c;"><i class="fa-solid fa-video" style="font-size:30px;"></i></div></div>
+                        <button class="flesh-btn" onclick="buyFeature(200, 'Donazione inviata!')"><i class="fa-solid fa-coins"></i> Dona 200 $DSN</button>
                     </div>
                 `;
             } else if (sectionKey === 'roulette') {
                 currentPeer = onlineNetworkPool[Math.floor(Math.random() * onlineNetworkPool.length)];
-                titleEl.innerText = "RADAR DI SOTTOMISSIONE GPS";
+                titleEl.innerText = "FLESH-RADAR CHAT GPS";
                 contentEl.innerHTML = `
                     <div style="display:flex; flex-direction:column; height:100%;">
                         <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); border-radius:16px; padding:15px; margin-bottom:15px;">
-                            <div style="color:#ff003c; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Agganciato con: <span style="color:#fff;">${currentPeer.name} (${currentPeer.type})</span></div>
-                            <p style="font-size:12px; color:#8b92a5;">Connessione georeferenziata attiva via GPS.</p>
+                            <div style="color:#ff003c; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Connesso con: <span style="color:#fff;">${currentPeer.name}</span></div>
+                            <p style="font-size:12px; color:#8b92a5;">Canale crittografato GPS.</p>
                         </div>
                         <div id="roulette-chat-history" style="flex:1; background:rgba(0,0,0,0.5); border-radius:16px; border:1px solid rgba(255,255,255,0.05); padding:15px; overflow-y:auto; margin-bottom:15px; display:flex; flex-direction:column; gap:12px;">
                             <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">${currentPeer.greeting}</div>
                         </div>
                         <div style="display:flex; gap:10px;">
-                            <input type="text" id="roulette-input" class="chat-input" placeholder="Scrivi in chat GPS..." onkeypress="if(event.key==='Enter') sendRouletteMsg()">
+                            <input type="text" id="roulette-input" class="chat-input" placeholder="Scrivi in chat..." onkeypress="if(event.key==='Enter') sendRouletteMsg()">
                             <button class="flesh-btn" onclick="sendRouletteMsg()"><i class="fa-solid fa-paper-plane"></i></button>
                         </div>
                     </div>
@@ -648,129 +620,78 @@
         }
 
         function closeSection() { document.getElementById('fs-viewer').style.display = 'none'; }
-
-        function triggerGpsPing(targetName, distance) {
-            if(currentUser.balance >= 50) {
-                currentUser.balance -= 50;
-                updateBalanceDisplay();
-                localStorage.setItem('redVelvetUser', JSON.stringify(currentUser));
-                triggerScreenShake();
-                showModal("PING GPS INVIATO", `Hai inviato un impulso geolocalizzato a ${targetName} (${distance} metri da te). Il guinzaglio si stringe. (-50 $DSN)`, "#ff003c", "<i class='fa-solid fa-location-crosshairs'></i>");
-            } else {
-                showModal("POVERTÀ", "Fondi $DSN insufficienti per lanciare il ping GPS.", "#ff003c", "<i class='fa-solid fa-wallet'></i>");
-            }
-        }
-
-        function earnCoin(amount, msg) {
-            currentUser.balance += amount;
-            updateBalanceDisplay();
-            localStorage.setItem('redVelvetUser', JSON.stringify(currentUser));
-            showModal("GUADAGNO $DSN", `${msg} +${amount} $DSN accreditati al tuo saldo.`, "#23a559", "<i class='fa-solid fa-coins'></i>");
-        }
-
+        function triggerGpsPing(targetName, distance) { earnCoin(10, 'Ping GPS registrato.'); showModal("PING", `Impulsato a ${targetName} (${distance}m).`, "#ff003c", "<i class='fa-solid fa-satellite'></i>"); }
+        function earnCoin(amount, msg) { currentUser.balance += amount; updateBalanceDisplay(); localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); showModal("SYNDICATE COIN", `${msg} +${amount} $DSN accreditati.`, "#23a559", "<i class='fa-solid fa-coins'></i>"); }
         function sendRouletteMsg() {
-            const input = document.getElementById('roulette-input');
-            const text = input.value.trim();
-            if(!text) return;
+            const input = document.getElementById('roulette-input'); const text = input.value.trim(); if(!text) return;
             const history = document.getElementById('roulette-chat-history');
-            
             history.innerHTML += `<div style="background:rgba(255,255,255,0.1); padding:12px 16px; border-radius:14px; max-width:85%; align-self:flex-end; color:#fff; font-size:14px;">${text}</div>`;
-            input.value = '';
-            history.scrollTop = history.scrollHeight;
-
+            input.value = ''; history.scrollTop = history.scrollHeight;
             setTimeout(() => {
-                const uniqueReplies = currentPeer.replies;
-                const reply = uniqueReplies[Math.floor(Math.random() * uniqueReplies.length)];
+                const reply = currentPeer.replies[Math.floor(Math.random() * currentPeer.replies.length)];
                 history.innerHTML += `<div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">${reply}</div>`;
                 history.scrollTop = history.scrollHeight;
             }, 1000);
         }
-
         function showModal(title, text, color, iconHTML) {
-            if(document.getElementById('side-menu').style.left === '0px') toggleSideMenu();
             const overlay = document.getElementById('custom-modal-overlay');
-            const iconBox = document.getElementById('modal-icon');
-            const titleBox = document.getElementById('modal-title');
-            const textBox = document.getElementById('modal-text');
-            const btn = document.getElementById('modal-btn');
-
-            iconBox.style.color = color;
-            iconBox.style.borderColor = color;
-            btn.style.background = color;
-            btn.style.color = (color === '#00e5ff') ? '#000' : '#fff';
-
-            iconBox.innerHTML = iconHTML || '<i class="fa-solid fa-triangle-exclamation"></i>';
-            titleBox.innerText = title;
-            textBox.innerHTML = text;
-
-            overlay.style.display = 'flex';
-            setTimeout(() => overlay.classList.add('active'), 10);
+            document.getElementById('modal-icon').style.color = color; document.getElementById('modal-icon').style.borderColor = color;
+            document.getElementById('modal-btn').style.background = color;
+            document.getElementById('modal-icon').innerHTML = iconHTML; document.getElementById('modal-title').innerText = title; document.getElementById('modal-text').innerHTML = text;
+            overlay.style.display = 'flex'; setTimeout(() => overlay.classList.add('active'), 10);
         }
-
         function closeModal() { document.getElementById('custom-modal-overlay').classList.remove('active'); setTimeout(() => document.getElementById('custom-modal-overlay').style.display = 'none', 300); }
         function triggerScreenShake() { const app = document.getElementById('main-app'); app.classList.add('shake-active'); setTimeout(() => app.classList.remove('shake-active'), 500); }
         function checkAuth() { const savedUser = localStorage.getItem('redVelvetUser'); if (savedUser) { currentUser = JSON.parse(savedUser); launchApp(); } else { document.getElementById('auth-overlay').classList.add('active'); } }
-        function handleGoogleAuth() { currentUser = { alias: "GPS_User_" + Math.floor(Math.random()*1000), cuckoldMode: false, chastityLocked: false, balance: 10000 }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
-        function handleAuth(e) { e.preventDefault(); currentUser = { alias: document.getElementById('reg-alias').value, cuckoldMode: false, chastityLocked: false, balance: 10000 }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
+        function handleGoogleAuth() { currentUser = { alias: "Syndicate_" + Math.floor(Math.random()*1000), balance: 10000 }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
+        function handleAuth(e) { e.preventDefault(); currentUser = { alias: document.getElementById('reg-alias').value, balance: 10000 }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
         function logout() { localStorage.removeItem('redVelvetUser'); location.reload(); }
-        function launchApp() { document.getElementById('main-app').style.opacity = '1'; document.getElementById('user-alias-display').innerText = currentUser.alias; updateBalanceDisplay(); if(currentUser.cuckoldMode) document.getElementById('cuckoldSwitch').classList.add('on'); if(currentUser.chastityLocked) document.getElementById('chastitySwitch').classList.add('on', 'chastity-on'); }
+        function launchApp() { document.getElementById('main-app').style.opacity = '1'; document.getElementById('user-alias-display').innerText = currentUser.alias; updateBalanceDisplay(); }
         function updateBalanceDisplay() { document.getElementById('display-balance').innerText = currentUser.balance; }
         function switchTab(tabId) { document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active')); document.getElementById('tab-' + tabId).classList.add('active'); event.currentTarget.classList.add('active'); }
-        function toggleCuckold() { const switchEl = document.getElementById('cuckoldSwitch'); switchEl.classList.toggle('on'); currentUser.cuckoldMode = switchEl.classList.contains('on'); localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); }
-        function toggleChastity() { const switchEl = document.getElementById('chastitySwitch'); switchEl.classList.toggle('on'); switchEl.classList.toggle('chastity-on'); currentUser.chastityLocked = switchEl.classList.contains('on'); localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); }
-        function checkChastity(itemName) { if(currentUser.chastityLocked) { triggerScreenShake(); showModal("ACCESSO NEGATO", "Sei in castità GPS per volere dell'organismo.", "#ff003c", "<i class='fa-solid fa-lock'></i>"); } else { showModal("SBLOCCO", `Accesso al modulo ${itemName} autorizzato.`, "#00e5ff", "<i class='fa-solid fa-unlock-keyhole'></i>"); } }
-        function enterDarkRoom(cost) { buyFeature(cost, "Stanza Oscura GPS sbloccata."); }
-        function buyFeature(cost, successMsg) { if(currentUser.balance >= cost) { currentUser.balance -= cost; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); updateBalanceDisplay(); showModal("TRANSAZIONE", `-${cost} $DSN. ${successMsg}`, "#23a559", "<i class='fa-solid fa-check'></i>"); } else { triggerScreenShake(); showModal("POVERTÀ", "Fondi $DSN insufficienti.", "#ff003c", "<i class='fa-solid fa-wallet'></i>"); } }
+        function toggleCuckold() { showModal("VOYEUR", "Modalità Voyeur attiva nel Syndicate.", "#ff003c", "<i class='fa-solid fa-video'></i>"); }
+        function toggleChastity() { showModal("CASTITÀ", "Gabbia di castità inserita nel profilo.", "#00e5ff", "<i class='fa-solid fa-lock'></i>"); }
+        function enterDarkRoom(cost) { buyFeature(cost, "Protocollo di Blocco AGI attivato."); }
+        function buyFeature(cost, msg) { if(currentUser.balance >= cost) { currentUser.balance -= cost; updateBalanceDisplay(); localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); showModal("TRANSAZIONE", msg, "#23a559", "<i class='fa-solid fa-check'></i>"); } else { triggerScreenShake(); showModal("POVERTÀ", "Fondi $DSN insufficienti.", "#ff003c", "<i class='fa-solid fa-wallet'></i>"); } }
 
         function openAgiConfig(masterKey) { currentMaster = masterKey; document.getElementById('agi-config').style.display = 'flex'; }
         function startSession() { currentIntensity = document.getElementById('agi-intensity').value; document.getElementById('agi-config').style.display = 'none'; openChatWindow(); }
         function getOrganismPrompt() {
-            if (currentMaster === 'rubina') return "Sei Rubina, l'Incantatrice Lussuriosa e Dominante di Velvethub.art. Parli in italiano usando un linguaggio esplicito, volgare, lussurioso e spietato orientato al GPS tracking erotico.";
-            else return "Sei Kali, il Dominatore Estremo di Velvethub.art. Parli in italiano con un gergo scurrile, animalesco e orientato al trash hardcore geolocalizzato.";
+            if (currentMaster === 'rubina') return "Sei Rubina, l'Incantatrice del The Sin Syndicate. Parli in italiano in modo spietato, lussurioso e ipnotico.";
+            else return "Sei Kali, il Dominatore Estremo del The Sin Syndicate. Parli in italiano in modo scurrile, pesante e trash hardcore.";
         }
         function openChatWindow() {
             const chatWindow = document.getElementById('chat-window');
             chatWindow.className = `chat-window theme-${currentMaster}-chat active`;
             document.getElementById('chat-master-name').innerText = currentMaster.toUpperCase();
             document.getElementById('devotion-bar').style.width = devotionLevel + '%';
-            const chatBox = document.getElementById('chat-messages');
-            chatBox.innerHTML = '';
-            const initMsg = currentMaster === 'rubina' ? "Radar GPS attivo. Ti sto tracciando, schiavo. Inginocchiati." : "Tira su sto telefono! Ti vedo sul radar, muoviti a obbedire.";
-            appendMessage(currentMaster, initMsg);
-            chatHistories[currentMaster] = [{ role: "model", parts: [{ text: initMsg }] }];
+            const chatBox = document.getElementById('chat-messages'); chatBox.innerHTML = '';
+            const initMsg = currentMaster === 'rubina' ? "Benvenuto nel Syndicate. Inginocchiati." : "Tira fuori la lingua, schiavo.";
+            appendMessage(currentMaster, initMsg); chatHistories[currentMaster] = [{ role: "model", parts: [{ text: initMsg }] }];
         }
         function closeChat() { document.getElementById('chat-window').classList.remove('active'); }
         function handleKeyPress(e) { if(e.key === 'Enter') sendMessage(); }
         async function sendMessage() {
-            const inputField = document.getElementById('chat-input-field');
-            const text = inputField.value.trim();
-            if(text === '') return;
-            appendMessage('user', text);
-            inputField.value = '';
-            chatHistories[currentMaster].push({ role: "user", parts: [{ text: text }] });
-            const typingInd = document.getElementById('typing-indicator');
-            typingInd.style.display = 'block';
+            const inputField = document.getElementById('chat-input-field'); const text = inputField.value.trim(); if(!text) return;
+            appendMessage('user', text); inputField.value = ''; chatHistories[currentMaster].push({ role: "user", parts: [{ text: text }] });
+            const typingInd = document.getElementById('typing-indicator'); typingInd.style.display = 'block';
             try {
                 const response = await fetch(`https://generativelanguage.googleapis.com/v1/models/gemini-3.8-flash:generateContent?key=${GEMINI_API_KEY}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    method: 'POST', headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ system_instruction: { parts: [{ text: getOrganismPrompt() }] }, contents: chatHistories[currentMaster] })
                 });
-                const data = await response.json();
-                typingInd.style.display = 'none';
+                const data = await response.json(); typingInd.style.display = 'none';
                 if(data.candidates && data.candidates[0].content) {
                     const replyText = data.candidates[0].content.parts[0].text;
-                    appendMessage(currentMaster, replyText);
-                    chatHistories[currentMaster].push({ role: "model", parts: [{ text: replyText }] });
+                    appendMessage(currentMaster, replyText); chatHistories[currentMaster].push({ role: "model", parts: [{ text: replyText }] });
                 }
-            } catch(e) { typingInd.style.display = 'none'; appendMessage(currentMaster, "*Errore di connessione sinaptica GPS.*"); }
+            } catch(e) { typingInd.style.display = 'none'; appendMessage(currentMaster, "*Errore di rete Syndicate.*"); }
         }
         function appendMessage(sender, text) {
             const chatBox = document.getElementById('chat-messages');
             const row = document.createElement('div'); row.className = sender === 'user' ? 'msg-row sent' : 'msg-row received';
             const bubble = document.createElement('div'); bubble.className = sender === 'user' ? 'msg-bubble sent' : 'msg-bubble received';
-            bubble.innerHTML = text; row.appendChild(bubble); chatBox.appendChild(row);
-            chatBox.scrollTop = chatBox.scrollHeight;
+            bubble.innerHTML = text; row.appendChild(bubble); chatBox.appendChild(row); chatBox.scrollTop = chatBox.scrollHeight;
         }
     </script>
 </body>
