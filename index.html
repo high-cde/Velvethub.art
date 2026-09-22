@@ -217,7 +217,7 @@
             <div class="side-menu-item" onclick="openSection('lettura')"><i class="fa-solid fa-book-open" style="color: #00e5ff;"></i> Lettura (Creator)</div>
             <div class="side-menu-item" onclick="openSection('annunci')"><i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci (Trovagnocca Partner)</div>
             <div class="side-menu-item" onclick="openSection('palco')"><i class="fa-solid fa-masks-theater" style="color: #ffb3c6;"></i> Palco pubblico & $DSN</div>
-            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-shuffle" style="color: #ff80a2;"></i> Chat Roulette (AGI & Umani)</div>
+            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-shuffle" style="color: #ff80a2;"></i> Chat Roulette (Umani & AGI Online)</div>
         </div>
     </div>
     
@@ -303,7 +303,7 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
                 <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.2</span></div>
+            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.3</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Safe Word"><i class="fa-solid fa-shield-halved"></i></button>
         </header>
 
@@ -313,12 +313,12 @@
                 <div class="console-hud">
                     <div class="hud-header">
                         <span><i class="fa-solid fa-terminal"></i> CONSOLE STATUS</span>
-                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> ONLINE</span>
+                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> ONLINE (142 UTENTI & AGI)</span>
                     </div>
                     <div class="hud-grid">
                         <div class="hud-stat">
                             <div class="hud-label">Indice Peccato</div>
-                            <div class="hud-value" id="hud-sin">99.4%</div>
+                            <div class="hud-value" id="hud-sin">99.8%</div>
                         </div>
                         <div class="hud-stat">
                             <div class="hud-label">Stato Guinzaglio</div>
@@ -354,12 +354,12 @@
                 
                 <div class="flesh-card">
                     <div class="flesh-avatar"><i class="fa-solid fa-mask"></i></div>
-                    <div style="flex:1;"><div class="flesh-name">Hostess_Luna</div><div class="flesh-role">A 350 metri • Milano</div></div>
+                    <div style="flex:1;"><div class="flesh-name">Hostess_Luna</div><div class="flesh-role">A 350 metri • Milano (Utente Reale)</div></div>
                     <button class="flesh-btn" onclick="triggerRadarPing('Hostess_Luna', 350)">Invia Ping (-50)</button>
                 </div>
                 <div class="flesh-card">
                     <div class="flesh-avatar" style="color:#00e5ff; border-color:rgba(0,229,255,0.3);"><i class="fa-solid fa-link"></i></div>
-                    <div style="flex:1;"><div class="flesh-name">Schiavo_04</div><div class="flesh-role">A 1.2 km • Roma</div></div>
+                    <div style="flex:1;"><div class="flesh-name">Schiavo_04</div><div class="flesh-role">A 1.2 km • Roma (Utente Reale)</div></div>
                     <button class="flesh-btn" style="color:#00e5ff; border-color:rgba(0,229,255,0.4); background:rgba(0,229,255,0.1);" onclick="triggerRadarPing('Schiavo_04', 1200)">Domina (-50)</button>
                 </div>
             </div>
@@ -489,6 +489,15 @@
         let chatHistories = { rubina: [], kali: [] };
         let devotionLevel = 15;
 
+        // Pool misto di utenti reali connessi e AGI online
+        const onlineNetworkPool = [
+            { name: "Mistress_Vane", type: "AGI Elite", avatar: "V", color: "#ff003c" },
+            { name: "Schiavo_Zero", type: "Utente Reale • Roma", avatar: "S", color: "#00e5ff" },
+            { name: "Luna_Dark", type: "Utente Reale • Milano", avatar: "L", color: "#ff80a2" },
+            { name: "Kinky_Boy", type: "Utente Reale • Torino", avatar: "K", color: "#8a00e6" },
+            { name: "Cagna_Nera", type: "AGI Sottomessa", avatar: "C", color: "#23a559" }
+        ];
+
         window.onload = () => {
             setTimeout(() => {
                 document.getElementById('splash').style.opacity = '0';
@@ -590,15 +599,16 @@
                     </div>
                 `;
             } else if (sectionKey === 'roulette') {
-                titleEl.innerText = "CHAT ROULETTE (AGI & UTENTI REALI)";
+                const randomPeer = onlineNetworkPool[Math.floor(Math.random() * onlineNetworkPool.length)];
+                titleEl.innerText = "CHAT ROULETTE (UMANI & AGI)";
                 contentEl.innerHTML = `
                     <div style="display:flex; flex-direction:column; height:100%;">
                         <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); border-radius:16px; padding:15px; margin-bottom:15px;">
-                            <div style="color:#ff003c; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Connesso con: <span id="roulette-peer" style="color:#fff;">Mistress_Vane (AGI Elite)</span></div>
-                            <p style="font-size:12px; color:#8b92a5;">Chat attiva tra utenti reali e entità AGI nel pornomondo.</p>
+                            <div style="color:#ff003c; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Connesso con: <span id="roulette-peer" style="color:#fff;">${randomPeer.name} (${randomPeer.type})</span></div>
+                            <p style="font-size:12px; color:#8b92a5;">Connessione attiva nel network globale di Red Velvet.</p>
                         </div>
                         <div id="roulette-chat-history" style="flex:1; background:rgba(0,0,0,0.5); border-radius:16px; border:1px solid rgba(255,255,255,0.05); padding:15px; overflow-y:auto; margin-bottom:15px; display:flex; flex-direction:column; gap:12px;">
-                            <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">Benvenuto nella Chat Roulette di Red Velvet. Ti sei appena collegato con me. Vediamo quanto vali, schiavo.</div>
+                            <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">Ciao da ${randomPeer.name}! Sono online sulla rete velvet. Di cosa vuoi parlare o confessarti?</div>
                         </div>
                         <div style="display:flex; gap:10px;">
                             <input type="text" id="roulette-input" class="chat-input" placeholder="Scrivi in chat..." onkeypress="if(event.key==='Enter') sendRouletteMsg()">
@@ -632,10 +642,10 @@
 
             setTimeout(() => {
                 const replies = [
-                    "Interessante confessione... Continua a leccare i miei stivali.",
-                    "La tua sottomissione in questa chat pubblica viene registrata dall'organismo.",
-                    "Parla con più rispetto se non vuoi che ti blocchi l'account.",
-                    "Sei solo una cagna vogliosa in cerca di attenzioni."
+                    "È affascinante vederti scrivere così... Ti piace obbedire?",
+                    "Registrato dal sistema velvet. La tua sottomissione è eccellente.",
+                    "Continua così e ti darò accesso a sezioni ancora più profonde.",
+                    "Un'altra confessione che profuma di peccato puro."
                 ];
                 const reply = replies[Math.floor(Math.random() * replies.length)];
                 history.innerHTML += `<div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">${reply}</div>`;
