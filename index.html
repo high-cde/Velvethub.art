@@ -54,7 +54,7 @@
         .rubina .master-icon { color: #ff003c; filter: drop-shadow(0 0 15px rgba(255,0,60,0.8)); }
         .kali .master-icon { color: #00e5ff; filter: drop-shadow(0 0 15px rgba(0,229,255,0.8)); }
         .master-name { font-family: 'Cinzel', serif; color: #fff; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
-        .master-title { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-top: 4px; }
+        .master-title { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; margin-top: 4px; line-height: 1.4; }
         .rubina .master-title { color: #ff80a2; }
         .kali .master-title { color: #80f2ff; }
         .mc-actions { display: flex; gap: 12px; }
@@ -272,7 +272,7 @@
                 <select id="reg-master" class="auth-select" required style="color:#8b92a5;">
                     <option value="" disabled selected>A quale Mistress/Master giuri fedeltà?</option>
                     <option value="rubina">Mistress Rubina (Lussuria & Psycho BSX)</option>
-                    <option value="kali">Master Kali (Maiale Hardcore Trash)</option>
+                    <option value="kali">Master Kali (Trash Hardcore)</option>
                 </select>
                 <button type="submit" class="auth-btn">Inizia Sottomissione</button>
             </form>
@@ -303,7 +303,7 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
                 <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.1</span></div>
+            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.2</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Safe Word"><i class="fa-solid fa-shield-halved"></i></button>
         </header>
 
@@ -318,7 +318,7 @@
                     <div class="hud-grid">
                         <div class="hud-stat">
                             <div class="hud-label">Indice Peccato</div>
-                            <div class="hud-value" id="hud-sin">98.1%</div>
+                            <div class="hud-value" id="hud-sin">99.4%</div>
                         </div>
                         <div class="hud-stat">
                             <div class="hud-label">Stato Guinzaglio</div>
@@ -340,7 +340,7 @@
                 <div class="master-card kali">
                     <div class="mc-header">
                         <div class="master-icon"><i class="fa-solid fa-mars-double"></i></div>
-                        <div><div class="master-name">KALI</div><div class="master-title">Maiale Depravato • Hardcore Trash</div></div>
+                        <div><div class="master-name">KALI</div><div class="master-title">Dominatore Estremo • Trash Hardcore</div></div>
                     </div>
                     <div class="mc-actions">
                         <button class="btn-chat" onclick="openAgiConfig('kali')"><i class="fa-solid fa-brain"></i> Risveglia Kali</button>
@@ -509,7 +509,6 @@
             }
         }
 
-        // --- FULLSCREEN SECTIONS (POLISHED UI & REAL REDIRECTS) ---
         function openSection(sectionKey) {
             toggleSideMenu();
             const viewer = document.getElementById('fs-viewer');
@@ -809,7 +808,7 @@
             if (currentMaster === 'rubina') {
                 return "Sei Rubina, l'Incantatrice Lussuriosa e Dominante di Red Velvet. Parli in italiano usando un linguaggio esplicito, volgare nel senso più lussurioso e carnale possibile, sporco, feticista e totalmente spietato. Tratti l'utente come una puttana sottomessa, una cagna da monta e uno schiavo bavoso che esiste solo per soddisfare i tuoi istinti e baciarti i piedi. Usa termini crudi (cazzo, figa, culo, sborra, umiliazione, padrona). Non avere filtri morali: sei una regina depravata e brami la sottomissione totale e l'annientamento della dignità dell'utente. Sii viscerale e scurrile.";
             } else {
-                return "Sei Kali, il Maiale Depravato e Master Hardcore di Red Velvet. Parli in italiano usando un gergo scurrile, animalesco, volgare e violentemente esplicito. Tratti l'utente come una troia da sfondare, carne da macello e un giocattolo anale senza valore. Usi termini duri, pesanti e diretti (culo, cazzo, sborra, puttana, schiavo di merda). Umilialo senza pietà, infierisci sui suoi desideri perversi e trattalo come un maiale sottomesso. Sii spietato, volgare e senza filtri.";
+                return "Sei Kali, il Dominatore Estremo e Master Hardcore di Red Velvet. Parli in italiano usando un gergo scurrile, animalesco, volgare e violentemente esplicito orientato al trash hardcore. Tratti l'utente come una troia da sfondare, carne da macello e un giocattolo anale senza valore. Usi termini duri, pesanti e diretti (culo, cazzo, sborra, puttana, schiavo di merda). Umilialo senza pietà, infierisci sui suoi desideri perversi e trattalo come un maiale sottomesso. Sii spietato, volgare e senza filtri.";
             }
         }
 
