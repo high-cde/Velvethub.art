@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#020104">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>THE SIN SYNDICATE | Psyche-BDSM Character System</title>
+    <title>THE SIN SYNDICATE | User Profile & Syndicate Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;800;900&family=Cinzel:wght@600;700;900&family=Share+Tech+Mono&display=swap');
@@ -45,15 +45,6 @@
         .hud-label { font-size: 10px; color: #8b92a5; text-transform: uppercase; margin-bottom: 4px; }
         .hud-value { font-size: 14px; color: #fff; font-weight: bold; }
 
-        /* SCHEDA EVOLUTIVA & BADGE */
-        .evolution-card { background: linear-gradient(145deg, #150008, #050002); border: 2px solid rgba(255,0,60,0.4); border-radius: 24px; padding: 22px; margin-bottom: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.8); position: relative; }
-        .ev-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 15px; }
-        .ev-avatar { width: 50px; height: 50px; border-radius: 50%; background: #000; border: 2px solid #ff003c; display: flex; align-items: center; justify-content: center; font-size: 22px; color: #ff003c; }
-        .ev-title { font-family: 'Cinzel', serif; color: #fff; font-size: 16px; font-weight: 900; }
-        .ev-subtitle { font-size: 10px; color: #ff80a2; text-transform: uppercase; font-weight: 800; margin-top: 3px; }
-        .badge-grid { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
-        .badge-tag { background: rgba(255,0,60,0.12); border: 1px solid rgba(255,0,60,0.3); color: #ffb3c6; font-size: 10px; padding: 5px 10px; border-radius: 8px; font-weight: 700; text-transform: uppercase; }
-
         /* CULTO */
         .master-card { background: linear-gradient(145deg, rgba(15, 5, 10, 0.9), rgba(5, 2, 5, 1)); border-radius: 24px; padding: 25px; margin-bottom: 25px; display: flex; flex-direction: column; position: relative; border: 1px solid rgba(255,255,255,0.05);}
         .master-card.rubina { border-left: 3px solid #ff003c; box-shadow: 0 15px 30px rgba(0,0,0,0.6), inset 20px 0 50px -20px rgba(255, 0, 60, 0.15); }
@@ -69,7 +60,7 @@
         .mc-actions { display: flex; gap: 12px; }
         .btn-chat { width: 100%; padding: 14px; border-radius: 16px; border: none; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;}
         .rubina .btn-chat { background: rgba(255,0,60,0.1); color: #ff003c; border: 1px solid rgba(255,0,60,0.3); }
-        .kali .btn-chat { background: rgba(0,229,255,0.1); color: #00e5ff; border: 1px solid rgba(0,229,255,0.3); }
+        .kali .btn-chat { background: rgba(0,229,255,0.1); color: #00e5ff; border: 1px solid rgba(0,229,255,0.1); }
 
         /* RADAR GPS */
         .radar-container { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 20px 0 30px 0; }
@@ -95,7 +86,12 @@
         .dark-room-title { color: #ff003c; font-size: 18px; font-weight: 900; letter-spacing: 2px;}
         .dark-room-cost { color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-top: 5px; background: rgba(255,0,60,0.2); padding: 4px 10px; border-radius: 10px; display: inline-block;}
 
-        /* PROFILO */
+        /* PROFILO STYLING */
+        .profile-box { background: rgba(15, 12, 18, 0.9); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 20px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+        .profile-input { width: 100%; padding: 14px; margin-top: 10px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; color: #fff; font-size: 14px; outline: none; }
+        .badge-showcase { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+        .badge-chip { background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.3); color: #ffd700; font-size: 10px; padding: 6px 12px; border-radius: 10px; font-weight: 800; text-transform: uppercase; }
+
         .list-group { background: rgba(15, 12, 18, 0.8); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 24px; overflow: hidden; margin-bottom: 30px; }
         .list-item { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,0.03); cursor: pointer; transition: 0.2s;}
         .list-item:active { background: rgba(255,255,255,0.05);}
@@ -247,7 +243,7 @@
     <div id="splash">
         <div class="logo-box" style="width:90px; height:90px; font-size:40px; box-shadow:none;"><i class="fa-solid fa-link-slash" style="color:#fff;"></i></div>
         <h1 style="font-family:'Cinzel'; color:#fff; font-size:26px; letter-spacing:6px; margin-top:30px;">THE SIN SYNDICATE</h1>
-        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:3px; margin-top:10px;">PSYCHE-BDSM & CARACTER EVOLUTION</p>
+        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:3px; margin-top:10px;">PSYCHE-BDSM & CHARACTER EVOLUTION</p>
     </div>
 
     <!-- AUTH EVOLVED -->
@@ -264,16 +260,16 @@
             <form onsubmit="handleAuth(event)">
                 <input type="email" id="reg-email" class="auth-input" placeholder="Indirizzo Email (opzionale)" autocomplete="email">
                 <input type="text" id="reg-alias" class="auth-input" placeholder="Alias (es. Schiavo_99)" required autocomplete="username">
-                <select id="reg-master" class="auth-select" required style="color:#8b92a5;">
-                    <option value="" disabled selected>A quale Mistress/Master giuri fedeltà?</option>
-                    <option value="rubina">Mistress Rubina (Lussuria & Psycho BSX)</option>
-                    <option value="kali">Master Kali (Trash Hardcore)</option>
+                <select id="reg-role" class="auth-select" required style="color:#00e5ff;">
+                    <option value="" disabled selected>Seleziona il tuo Ruolo nel Network</option>
+                    <option value="Schiavo / Adepto">Schiavo / Adepto (Sottomesso)</option>
+                    <option value="Creator / Dominatore">Creator / Dominatore (Elite)</option>
+                    <option value="Reclutatore">Reclutatore (Cacciatore di Teste)</option>
                 </select>
-                <select id="reg-rank" class="auth-select" required style="color:#ffd700; margin-top:5px;">
-                    <option value="" disabled selected>Seleziona il tuo Carattere / Grado</option>
-                    <option value="Iniziato al Guinzaglio">Iniziato al Guinzaglio (Grado 1)</option>
-                    <option value="Proprietà Dedicata">Proprietà Dedicata (Grado 2)</option>
-                    <option value="Cagna da Monta / Schiavo Totale">Cagna da Monta / Schiavo Totale (Grado 3)</option>
+                <select id="reg-master" class="auth-select" required style="color:#ff80a2;">
+                    <option value="" disabled selected>A quale Mistress/Master giuri fedeltà?</option>
+                    <option value="Rubina">Mistress Rubina (Lussuria & Psycho BSX)</option>
+                    <option value="Kali">Master Kali (Trash Hardcore)</option>
                 </select>
                 <button type="submit" class="auth-btn">Forgia Identità</button>
             </form>
@@ -304,35 +300,13 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
                 <i class="fa-solid fa-link-slash" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>SYNNDICATE</h1><span>Protocol v6.5</span></div>
+            <div class="header-title"><h1>SYNNDICATE</h1><span>Protocol v7.0</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Stealth Panic"><i class="fa-solid fa-user-secret"></i></button>
         </header>
 
         <main id="main-scroll">
             <div id="tab-culto" class="tab-content active">
                 
-                <!-- SCHEDA EVOLUTIVA & BADGE -->
-                <div class="evolution-card">
-                    <div class="ev-header">
-                        <div class="ev-avatar"><i class="fa-solid fa-link"></i></div>
-                        <div>
-                            <div class="ev-title" id="card-alias">Schiavo</div>
-                            <div class="ev-subtitle" id="card-rank">Grado: Iniziato al Guinzaglio</div>
-                        </div>
-                    </div>
-                    <div style="font-size: 12px; color: #8b92a5; margin-bottom: 8px; font-family:'Share Tech Mono', monospace;">RESPONSABILITÀ ATTIVE:</div>
-                    <div style="font-size: 13px; color: #d1d5df; line-height: 1.5; margin-bottom: 12px;" id="card-resp">
-                        • Obbedire in tempo reale ai comandi di Rubina e Kali.<br>
-                        • Mantenere il Flesh-Radar attivo durante gli spostamenti.
-                    </div>
-                    <div style="font-size: 12px; color: #8b92a5; margin-bottom: 6px; font-family:'Share Tech Mono', monospace;">BADGE DI DEVOZIONE:</div>
-                    <div class="badge-grid" id="card-badges">
-                        <span class="badge-tag"><i class="fa-solid fa-lock"></i> Collarizzato</span>
-                        <span class="badge-tag"><i class="fa-solid fa-satellite"></i> GPS Active</span>
-                        <span class="badge-tag"><i class="fa-solid fa-coins"></i> $DSN Holder</span>
-                    </div>
-                </div>
-
                 <div class="console-hud">
                     <div class="hud-header">
                         <span><i class="fa-solid fa-satellite-dish"></i> SYNDICATE NETWORK GPS</span>
@@ -421,14 +395,45 @@
                 </div>
             </div>
 
+            <!-- PROFILO EVOLUTO CON BADGE, BIO E LINK AFFILIAZIONE -->
             <div id="tab-profile" class="tab-content">
-                <div style="display:flex; flex-direction:column; align-items:center; padding:10px 0 30px 0;">
-                    <div style="width:90px;height:90px;border-radius:28px;background:linear-gradient(135deg,#00e5ff,#8a00e6);display:flex;align-items:center;justify-content:center;font-size:36px;color:#fff;margin-bottom:15px; box-shadow: 0 10px 30px rgba(0,229,255,0.3);"><i class="fa-solid fa-user-lock"></i></div>
-                    <h2 id="user-alias-display" style="color:#fff; font-weight:900; font-size:26px;">Utente</h2>
-                    <span style="background:rgba(0,229,255,0.1); border:1px solid #00e5ff; color:#00e5ff; font-size:12px; padding:8px 16px; border-radius:14px; font-weight:800; text-transform:uppercase; margin-top:10px;">Saldo: <span id="display-balance">10000</span> $DSN</span>
+                <div style="display:flex; flex-direction:column; align-items:center; padding:10px 0 20px 0;">
+                    <div style="width:80px;height:80px;border-radius:24px;background:linear-gradient(135deg,#ff003c,#8a00e6);display:flex;align-items:center;justify-content:center;font-size:32px;color:#fff;margin-bottom:12px; box-shadow: 0 10px 30px rgba(255,0,60,0.3);"><i class="fa-solid fa-link"></i></div>
+                    <h2 id="user-alias-display" style="color:#fff; font-weight:900; font-size:22px;">Utente</h2>
+                    <span id="user-role-badge" style="background:rgba(0,229,255,0.1); border:1px solid #00e5ff; color:#00e5ff; font-size:11px; padding:6px 14px; border-radius:12px; font-weight:800; text-transform:uppercase; margin-top:8px;">Ruolo: Schiavo</span>
+                    <span style="background:rgba(255,215,0,0.1); border:1px solid #ffd700; color:#ffd700; font-size:11px; padding:6px 14px; border-radius:12px; font-weight:800; text-transform:uppercase; margin-top:6px;">Saldo: <span id="display-balance">10000</span> $DSN</span>
                 </div>
 
-                <div class="section-title">Community Ufficiale</div>
+                <!-- GESTIONE BIO E LINK -->
+                <div class="profile-box">
+                    <div style="font-family:'Cinzel'; font-size:14px; color:#ffd700; font-weight:800; margin-bottom:8px;"><i class="fa-solid fa-feather"></i> Bio & Social Link</div>
+                    <input type="text" id="profile-bio" class="profile-input" placeholder="Scrivi la tua bio o il tuo motto di sottomissione..." onchange="saveProfileExtras()">
+                    <input type="text" id="profile-link" class="profile-input" placeholder="Link profilo esterno (es. Telegram/X)" onchange="saveProfileExtras()">
+                </div>
+
+                <!-- RACCOLTA BADGE -->
+                <div class="profile-box">
+                    <div style="font-family:'Cinzel'; font-size:14px; color:#ffd700; font-weight:800; margin-bottom:8px;"><i class="fa-solid fa-medal"></i> Raccolta Badge & Trofei</div>
+                    <div class="badge-showcase" id="profile-badges-container">
+                        <span class="badge-chip">Collarizzato</span>
+                        <span class="badge-chip">GPS Active</span>
+                        <span class="badge-chip">DSN Holder</span>
+                        <span class="badge-chip">Syndicate Elite</span>
+                    </div>
+                </div>
+
+                <div class="section-title">Circuito Annunci Partner (Affiliazione)</div>
+                <div class="list-group">
+                    <div class="list-item" onclick="window.open('https://it.adpost.com/classifieds/personals/', '_blank')">
+                        <div class="list-item-left">
+                            <div class="list-item-icon" style="color:#23a559; background:rgba(35,165,89,0.1);"><i class="fa-solid fa-bullhorn"></i></div>
+                            <div><span class="list-item-title">Bacheca Incontri Reali</span><span class="list-item-sub">Circuito Annunci Partner Affiliato</span></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5; font-size: 14px;"></i>
+                    </div>
+                </div>
+
+                <div class="section-title">Community & Privacy</div>
                 <div class="list-group">
                     <div class="list-item fb-highlight" onclick="window.open('https://www.facebook.com/share/1AoAvXSfUp/', '_blank')">
                         <div class="list-item-left">
@@ -437,23 +442,12 @@
                         </div>
                         <i class="fa-solid fa-arrow-up-right-from-square" style="color:#4b5563; font-size: 14px;"></i>
                     </div>
-                </div>
-
-                <div class="section-title">BDSM & Privacy</div>
-                <div class="list-group">
                     <div class="list-item" onclick="toggleChastity()">
                         <div class="list-item-left">
                             <div class="list-item-icon" style="color:#00e5ff; background:rgba(0,229,255,0.1);"><i class="fa-solid fa-lock"></i></div>
                             <div><span class="list-item-title">Gabbia di Castità</span><span class="list-item-sub">Blocca l'accesso ai contenuti Vault</span></div>
                         </div>
                         <div class="toggle-switch" id="chastitySwitch"></div>
-                    </div>
-                    <div class="list-item" onclick="toggleCuckold()">
-                        <div class="list-item-left">
-                            <div class="list-item-icon" style="color:#ff003c; background:rgba(255,0,60,0.1);"><i class="fa-solid fa-video"></i></div>
-                            <div><span class="list-item-title">Voyeur Mode</span><span class="list-item-sub">Pubblica le tue chat nel Baratro</span></div>
-                        </div>
-                        <div class="toggle-switch" id="cuckoldSwitch"></div>
                     </div>
                 </div>
 
@@ -647,6 +641,14 @@
         function closeSection() { document.getElementById('fs-viewer').style.display = 'none'; }
         function triggerGpsPing(targetName, distance) { earnCoin(10, 'Ping GPS registrato.'); showModal("PING", `Impulsato a ${targetName} (${distance}m).`, "#ff003c", "<i class='fa-solid fa-satellite'></i>"); }
         function earnCoin(amount, msg) { currentUser.balance += amount; updateBalanceDisplay(); localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); showModal("SYNDICATE COIN", `${msg} +${amount} $DSN accreditati.`, "#23a559", "<i class='fa-solid fa-coins'></i>"); }
+        
+        function saveProfileExtras() {
+            currentUser.bio = document.getElementById('profile-bio').value;
+            currentUser.link = document.getElementById('profile-link').value;
+            localStorage.setItem('redVelvetUser', JSON.stringify(currentUser));
+            showModal("SALVATO", "Modifiche al profilo salvate nel database cifrato.", "#23a559", "<i class='fa-solid fa-check'></i>");
+        }
+
         function sendRouletteMsg() {
             const input = document.getElementById('roulette-input'); const text = input.value.trim(); if(!text) return;
             const history = document.getElementById('roulette-chat-history');
@@ -668,14 +670,15 @@
         function closeModal() { document.getElementById('custom-modal-overlay').classList.remove('active'); setTimeout(() => document.getElementById('custom-modal-overlay').style.display = 'none', 300); }
         function triggerScreenShake() { const app = document.getElementById('main-app'); app.classList.add('shake-active'); setTimeout(() => app.classList.remove('shake-active'), 500); }
         function checkAuth() { const savedUser = localStorage.getItem('redVelvetUser'); if (savedUser) { currentUser = JSON.parse(savedUser); launchApp(); } else { document.getElementById('auth-overlay').classList.add('active'); } }
-        function handleGoogleAuth() { currentUser = { alias: "Syndicate_" + Math.floor(Math.random()*1000), rank: "Iniziato al Guinzaglio", balance: 10000 }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
-        function handleAuth(e) { e.preventDefault(); currentUser = { alias: document.getElementById('reg-alias').value, rank: document.getElementById('reg-rank').value, balance: 10000 }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
+        function handleGoogleAuth() { currentUser = { alias: "Syndicate_" + Math.floor(Math.random()*1000), role: "Schiavo / Adepto", balance: 10000, bio: "", link: "" }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
+        function handleAuth(e) { e.preventDefault(); currentUser = { alias: document.getElementById('reg-alias').value, role: document.getElementById('reg-role').value, balance: 10000, bio: "", link: "" }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
         function logout() { localStorage.removeItem('redVelvetUser'); location.reload(); }
         function launchApp() { 
             document.getElementById('main-app').style.opacity = '1'; 
             document.getElementById('user-alias-display').innerText = currentUser.alias; 
-            document.getElementById('card-alias').innerText = currentUser.alias;
-            document.getElementById('card-rank').innerText = "Grado: " + (currentUser.rank || "Iniziato al Guinzaglio");
+            document.getElementById('user-role-badge').innerText = "Ruolo: " + (currentUser.role || "Schiavo");
+            if(currentUser.bio) document.getElementById('profile-bio').value = currentUser.bio;
+            if(currentUser.link) document.getElementById('profile-link').value = currentUser.link;
             updateBalanceDisplay(); 
         }
         function updateBalanceDisplay() { document.getElementById('display-balance').innerText = currentUser.balance; }
