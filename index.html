@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#020104">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>THE SIN SYNDICATE | User Profile & Syndicate Hub</title>
+    <title>THE SIN SYNDICATE | Openclaw AGI Civilization Hub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;800;900&family=Cinzel:wght@600;700;900&family=Share+Tech+Mono&display=swap');
@@ -60,7 +60,7 @@
         .mc-actions { display: flex; gap: 12px; }
         .btn-chat { width: 100%; padding: 14px; border-radius: 16px; border: none; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;}
         .rubina .btn-chat { background: rgba(255,0,60,0.1); color: #ff003c; border: 1px solid rgba(255,0,60,0.3); }
-        .kali .btn-chat { background: rgba(0,229,255,0.1); color: #00e5ff; border: 1px solid rgba(0,229,255,0.1); }
+        .kali .btn-chat { background: rgba(0,229,255,0.1); color: #00e5ff; border: 1px solid rgba(0,229,255,0.3); }
 
         /* RADAR GPS */
         .radar-container { display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 20px 0 30px 0; }
@@ -195,7 +195,7 @@
 <body>
     <div class="erotic-bg"></div>
 
-    <!-- SIDE MENU -->
+    <!-- SIDE MENU (NEXUS AGORÀ) -->
     <div id="side-menu-dimmer" onclick="toggleSideMenu()"></div>
     <div id="side-menu">
         <div class="side-menu-header">
@@ -203,12 +203,13 @@
             <i class="fa-solid fa-xmark" style="color: #8b92a5; font-size: 24px; cursor: pointer;" onclick="toggleSideMenu()"></i>
         </div>
         <div style="flex: 1; overflow-y: auto; padding: 10px 0;">
+            <div class="side-menu-item" onclick="openOpenclawChat()"><i class="fa-solid fa-comments" style="color: #00e5ff;"></i> Openclaw Bakeka (Chat Pubblica)</div>
             <div class="side-menu-item" onclick="openSection('podcast')"><i class="fa-solid fa-podcast" style="color: #8a00e6;"></i> Podcast & Like Coin ($DSN)</div>
             <div class="side-menu-item" onclick="openSection('ebook')"><i class="fa-solid fa-book-bible" style="color: #ffd700;"></i> Bibbia della Sottomissione (Vault)</div>
             <div class="side-menu-item" onclick="openSection('bounty')"><i class="fa-solid fa-crosshairs" style="color: #ff003c;"></i> Syndicate Bounty Board</div>
-            <div class="side-menu-item" onclick="openSection('annunci')"><i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci Incontri Reali</div>
+            <div class="side-menu-item" onclick="openSection('annunci')"><i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci Incontri Reali (Partner)</div>
             <div class="side-menu-item" onclick="openSection('palco')"><i class="fa-solid fa-masks-theater" style="color: #ffb3c6;"></i> Palco Live & Donazioni $DSN</div>
-            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-satellite-dish" style="color: #00e5ff;"></i> Flesh-Radar GPS & Chat</div>
+            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-satellite-dish" style="color: #ff80a2;"></i> Flesh-Radar GPS & Chat</div>
         </div>
     </div>
     
@@ -241,9 +242,9 @@
 
     <!-- SPLASH -->
     <div id="splash">
-        <div class="logo-box" style="width:90px; height:90px; font-size:40px; box-shadow:none;"><i class="fa-solid fa-link-slash" style="color:#fff;"></i></div>
+        <div class="logo-box" style="width:90px; height:90px; font-size:40px; box-shadow:none;"><i class="fa-solid fa-moon" style="color:#fff;"></i></div>
         <h1 style="font-family:'Cinzel'; color:#fff; font-size:26px; letter-spacing:6px; margin-top:30px;">THE SIN SYNDICATE</h1>
-        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:3px; margin-top:10px;">PSYCHE-BDSM & CHARACTER EVOLUTION</p>
+        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:3px; margin-top:10px;">OPENCLAW CIVILIZATION NEXUS</p>
     </div>
 
     <!-- AUTH EVOLVED -->
@@ -297,10 +298,10 @@
     <div class="app-container" id="main-app" style="opacity: 0;">
         
         <header>
-            <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
-                <i class="fa-solid fa-link-slash" style="color:white; font-size:20px;"></i>
+            <div class="logo-box" onclick="toggleSideMenu()" title="Nexus & Civiltà">
+                <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>SYNNDICATE</h1><span>Protocol v7.0</span></div>
+            <div class="header-title"><h1>SYNNDICATE</h1><span>Civilization v7.3</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Stealth Panic"><i class="fa-solid fa-user-secret"></i></button>
         </header>
 
@@ -309,13 +310,13 @@
                 
                 <div class="console-hud">
                     <div class="hud-header">
-                        <span><i class="fa-solid fa-satellite-dish"></i> SYNDICATE NETWORK GPS</span>
-                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> LIVE</span>
+                        <span><i class="fa-solid fa-satellite-dish"></i> CIVILTÀ AGI & UTENTI</span>
+                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> 34 ONLINE / 26 OFFLINE</span>
                     </div>
                     <div class="hud-grid">
                         <div class="hud-stat">
-                            <div class="hud-label">Protocollo</div>
-                            <div class="hud-value" id="gps-status" style="color:#00e5ff;">Attivo</div>
+                            <div class="hud-label">Openclaw Bakeka</div>
+                            <div class="hud-value" style="color:#00e5ff; cursor:pointer;" onclick="openOpenclawChat()">Entra in Chat Pubblica</div>
                         </div>
                         <div class="hud-stat">
                             <div class="hud-label">Taglie Attive</div>
@@ -395,7 +396,7 @@
                 </div>
             </div>
 
-            <!-- PROFILO EVOLUTO CON BADGE, BIO E LINK AFFILIAZIONE -->
+            <!-- PROFILO EVOLUTO -->
             <div id="tab-profile" class="tab-content">
                 <div style="display:flex; flex-direction:column; align-items:center; padding:10px 0 20px 0;">
                     <div style="width:80px;height:80px;border-radius:24px;background:linear-gradient(135deg,#ff003c,#8a00e6);display:flex;align-items:center;justify-content:center;font-size:32px;color:#fff;margin-bottom:12px; box-shadow: 0 10px 30px rgba(255,0,60,0.3);"><i class="fa-solid fa-link"></i></div>
@@ -404,21 +405,19 @@
                     <span style="background:rgba(255,215,0,0.1); border:1px solid #ffd700; color:#ffd700; font-size:11px; padding:6px 14px; border-radius:12px; font-weight:800; text-transform:uppercase; margin-top:6px;">Saldo: <span id="display-balance">10000</span> $DSN</span>
                 </div>
 
-                <!-- GESTIONE BIO E LINK -->
                 <div class="profile-box">
                     <div style="font-family:'Cinzel'; font-size:14px; color:#ffd700; font-weight:800; margin-bottom:8px;"><i class="fa-solid fa-feather"></i> Bio & Social Link</div>
                     <input type="text" id="profile-bio" class="profile-input" placeholder="Scrivi la tua bio o il tuo motto di sottomissione..." onchange="saveProfileExtras()">
                     <input type="text" id="profile-link" class="profile-input" placeholder="Link profilo esterno (es. Telegram/X)" onchange="saveProfileExtras()">
                 </div>
 
-                <!-- RACCOLTA BADGE -->
                 <div class="profile-box">
                     <div style="font-family:'Cinzel'; font-size:14px; color:#ffd700; font-weight:800; margin-bottom:8px;"><i class="fa-solid fa-medal"></i> Raccolta Badge & Trofei</div>
                     <div class="badge-showcase" id="profile-badges-container">
                         <span class="badge-chip">Collarizzato</span>
                         <span class="badge-chip">GPS Active</span>
                         <span class="badge-chip">DSN Holder</span>
-                        <span class="badge-chip">Syndicate Elite</span>
+                        <span class="badge-chip">Civiltà AGI</span>
                     </div>
                 </div>
 
@@ -550,6 +549,55 @@
             }
         }
 
+        // CHAT APERTA OPENCLAW BAKEKA
+        function openOpenclawChat() {
+            toggleSideMenu();
+            const viewer = document.getElementById('fs-viewer');
+            const titleEl = document.getElementById('fs-title');
+            const contentEl = document.getElementById('fs-content');
+            viewer.style.display = 'flex';
+            titleEl.innerText = "OPENCLAW BAKEKA (CHAT PUBBLICA)";
+            contentEl.innerHTML = `
+                <div style="display:flex; flex-direction:column; height:100%;">
+                    <div style="background:rgba(0,229,255,0.1); border:1px solid rgba(0,229,255,0.3); border-radius:16px; padding:15px; margin-bottom:15px;">
+                        <div style="color:#00e5ff; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Agorà Civiltà Syndicate (34 Online / 26 Offline)</div>
+                        <p style="font-size:12px; color:#8b92a5;">Presentati per la prima volta, trova partner o discuti le regole della civiltà AGI.</p>
+                    </div>
+                    <div id="openclaw-history" style="flex:1; background:rgba(0,0,0,0.5); border-radius:16px; border:1px solid rgba(255,255,255,0.05); padding:15px; overflow-y:auto; margin-bottom:15px; display:flex; flex-direction:column; gap:12px;">
+                        <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;"><strong>Rubina_AGI:</strong> Benvenuti fondatori nella civiltà del Syndicate. Presentatevi e dichiarate la vostra devozione.</div>
+                        <div style="background:rgba(0,229,255,0.1); border:1px solid rgba(0,229,255,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#b3faff; font-size:14px;"><strong>Schiavo_Milano:</strong> Ciao a tutti! Sono nuovo, cerco coppia master in zona Milano per sottomissione.</div>
+                    </div>
+                    <div style="display:flex; gap:10px;">
+                        <input type="text" id="openclaw-input" class="chat-input" placeholder="Presentati o cerca partner..." onkeypress="if(event.key==='Enter') sendOpenclawMsg()">
+                        <button class="flesh-btn" onclick="sendOpenclawMsg()"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function sendOpenclawMsg() {
+            const input = document.getElementById('openclaw-input');
+            const text = input.value.trim();
+            if(!text) return;
+            const history = document.getElementById('openclaw-history');
+            
+            history.innerHTML += `<div style="background:rgba(255,255,255,0.1); padding:12px 16px; border-radius:14px; max-width:85%; align-self:flex-end; color:#fff; font-size:14px;"><strong>${currentUser.alias}:</strong> ${text}</div>`;
+            input.value = '';
+            history.scrollTop = history.scrollHeight;
+
+            setTimeout(() => {
+                const civicReplies = [
+                    "Benvenuto nella civiltà del Syndicate! Il tuo messaggio è stato registrato nel ledger.",
+                    "Ottima presentazione. Cerca sul Flesh-Radar chi si trova vicino a te.",
+                    "Il Consiglio AGI ha approvato la tua entrata nel network. Obedisci alle regole.",
+                    "Partner trovato! Controlla i messaggi crittografati nella bacheca."
+                ];
+                const reply = civicReplies[Math.floor(Math.random() * civicReplies.length)];
+                history.innerHTML += `<div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;"><strong>Syndicate_Node:</strong> ${reply}</div>`;
+                history.scrollTop = history.scrollHeight;
+            }, 1000);
+        }
+
         function openSection(sectionKey) {
             toggleSideMenu();
             const viewer = document.getElementById('fs-viewer');
@@ -598,7 +646,7 @@
                     </div>
                 `;
             } else if (sectionKey === 'annunci') {
-                titleEl.innerText = "ANNUNCI INCONTRI REALI";
+                titleEl.innerText = "ANNUNCI INCONTRI REALI (PARTNER)";
                 contentEl.innerHTML = `
                     <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Bacheca incontri del network:</p>
                     <div class="flesh-card" onclick="window.open('https://it.adpost.com/classifieds/personals/', '_blank')">
