@@ -202,12 +202,12 @@
             <i class="fa-solid fa-xmark" style="color: #8b92a5; font-size: 24px; cursor: pointer;" onclick="toggleSideMenu()"></i>
         </div>
         <div style="flex: 1; overflow-y: auto; padding: 10px 0;">
-            <div class="side-menu-item" onclick="openSection('podcast')"><i class="fa-solid fa-podcast" style="color: #8a00e6;"></i> Podcast (Rubina)</div>
+            <div class="side-menu-item" onclick="openSection('podcast')"><i class="fa-solid fa-podcast" style="color: #8a00e6;"></i> Podcast (Guadagna $DSN)</div>
             <div class="side-menu-item" onclick="openSection('ebook')"><i class="fa-solid fa-book-skull" style="color: #ff003c;"></i> Ebook 18+</div>
             <div class="side-menu-item" onclick="openSection('lettura')"><i class="fa-solid fa-book-open" style="color: #00e5ff;"></i> Lettura (Creator)</div>
-            <div class="side-menu-item" onclick="openSection('annunci')"><i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci (Trovagnocca Red Velvet)</div>
+            <div class="side-menu-item" onclick="openSection('annunci')"><i class="fa-solid fa-bullhorn" style="color: #23a559;"></i> Annunci (Trovagnocca Partner)</div>
             <div class="side-menu-item" onclick="openSection('palco')"><i class="fa-solid fa-masks-theater" style="color: #ffb3c6;"></i> Palco pubblico & $DSN</div>
-            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-shuffle" style="color: #ff80a2;"></i> Chat Roulette Nativa</div>
+            <div class="side-menu-item" onclick="openSection('roulette')"><i class="fa-solid fa-shuffle" style="color: #ff80a2;"></i> Chat Roulette (AGI & Umani)</div>
         </div>
     </div>
     
@@ -245,7 +245,7 @@
         <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:4px; margin-top:10px;">ORGANISM AGI PORNOMONDO</p>
     </div>
 
-    <!-- AUTH EVOLVED (MAIL / GOOGLE / ALIAS) -->
+    <!-- AUTH EVOLVED -->
     <div id="auth-overlay">
         <div class="auth-box">
             <h2 style="color: #fff; font-family:'Cinzel'; text-align:center; margin-bottom:20px; font-size: 20px;">ACCEDI AL PORNOMONDO</h2>
@@ -293,7 +293,7 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
                 <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v3.9</span></div>
+            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.0</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Safe Word"><i class="fa-solid fa-shield-halved"></i></button>
         </header>
 
@@ -308,7 +308,7 @@
                     <div class="hud-grid">
                         <div class="hud-stat">
                             <div class="hud-label">Indice Peccato</div>
-                            <div class="hud-value" id="hud-sin">94.8%</div>
+                            <div class="hud-value" id="hud-sin">96.2%</div>
                         </div>
                         <div class="hud-stat">
                             <div class="hud-label">Stato Guinzaglio</div>
@@ -499,7 +499,7 @@
             }
         }
 
-        // --- FULLSCREEN SECTIONS (PODCAST, EBOOK, LETTURA, ANNUNCI, PALCO, ROULETTE) ---
+        // --- FULLSCREEN SECTIONS (PODCAST CON LIKE COIN & $DSN, ANNUNCI TROVAAGNOCCA, CHAT ROULETTE AGI & UMANI) ---
         function openSection(sectionKey) {
             toggleSideMenu();
             const viewer = document.getElementById('fs-viewer');
@@ -509,17 +509,17 @@
             contentEl.innerHTML = '';
 
             if (sectionKey === 'podcast') {
-                titleEl.innerText = "PODCAST DI RUBINA";
+                titleEl.innerText = "PODCAST DI RUBINA (GUADAGNA $DSN)";
                 contentEl.innerHTML = `
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Ascolta le tracce, lascia Like, commenti utili o condividi per accumulare Like Coin convertibili in $DSN:</p>
                     <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); border-radius:20px; padding:20px; margin-bottom:15px;">
-                        <h3 style="color:#ff003c; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Traccia 01: La Sottomissione Mentale</h3>
-                        <p style="font-size:14px; line-height:1.5; color:#ffb3c6; margin-bottom:15px;">Mistress Rubina racconta come azzerare la volontà dello schiavo attraverso il controllo vocale.</p>
-                        <button class="flesh-btn" onclick="showModal('RIPRODUZIONE', 'Audio in streaming crittografato avviato.', '#ff003c', '<i class=\'fa-solid fa-play\'></i>')">Ascolta Traccia (-10 $DSN)</button>
-                    </div>
-                    <div style="background:rgba(138,0,230,0.1); border:1px solid rgba(138,0,230,0.3); border-radius:20px; padding:20px;">
-                        <h3 style="color:#b380ff; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Traccia 02: Tease & Denial Notturno</h3>
-                        <p style="font-size:14px; line-height:1.5; color:#d1d5df; margin-bottom:15px;">Lezioni di frustrazione e castità totale per adepti meritevoli.</p>
-                        <button class="flesh-btn" style="color:#b380ff; border-color:#b380ff; background:rgba(138,0,230,0.1);" onclick="showModal('RIPRODUZIONE', 'Audio in streaming crittografato avviato.', '#8a00e6', '<i class=\'fa-solid fa-play\'></i>')">Ascolta Traccia (-10 $DSN)</button>
+                        <h3 style="color:#ff003c; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Traccia 01: Sottomissione Totale</h3>
+                        <p style="font-size:14px; line-height:1.5; color:#ffb3c6; margin-bottom:15px;">Monologo di Rubina sul controllo mentale e la sottomissione assoluta.</p>
+                        <div style="display:flex; gap:10px;">
+                            <button class="flesh-btn" onclick="earnCoin(50, 'Ascolto completato! +50 Like Coin convertiti in $DSN.')"><i class="fa-solid fa-headphones"></i> Ascolta (+50)</button>
+                            <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="earnCoin(25, 'Like registrato! +25 $DSN.')"><i class="fa-solid fa-heart"></i> Like</button>
+                            <button class="flesh-btn" style="color:#8a00e6; border-color:#8a00e6; background:rgba(138,0,230,0.1);" onclick="earnCoin(30, 'Condivisione riuscita! +30 $DSN.')"><i class="fa-solid fa-share"></i> Condividi</button>
+                        </div>
                     </div>
                 `;
             } else if (sectionKey === 'ebook') {
@@ -529,11 +529,6 @@
                     <div class="flesh-card" onclick="window.open('https://www.gutenberg.org', '_blank')">
                         <div class="flesh-avatar" style="color:#ff003c;"><i class="fa-solid fa-book"></i></div>
                         <div style="flex:1;"><div class="flesh-name">Archivio Erotico Classico</div><div class="flesh-role">Biblioteca estera gratuita</div></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5;"></i>
-                    </div>
-                    <div class="flesh-card" onclick="window.open('https://archive.org', '_blank')">
-                        <div class="flesh-avatar" style="color:#00e5ff;"><i class="fa-solid fa-book-skull"></i></div>
-                        <div style="flex:1;"><div class="flesh-name">Manualistica BSX Estrema</div><div class="flesh-role">Documenti storici e guide</div></div>
                         <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5;"></i>
                     </div>
                 `;
@@ -551,13 +546,13 @@
                     </div>
                 `;
             } else if (sectionKey === 'annunci') {
-                titleEl.innerText = "ANNUNCI RED VELVET";
+                titleEl.innerText = "ANNUNCI RED VELVET (TROVAGNOCCA CLONE)";
                 contentEl.innerHTML = `
-                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Clonazione e reindirizzamento firmato di incontri dedicati:</p>
+                    <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Reindirizzamento ufficiale firmato al nostro circuito di incontri e annunci reali:</p>
                     <div class="flesh-card" onclick="window.open('https://it.adultsearch.com', '_blank')">
                         <div class="flesh-avatar" style="color:#23a559;"><i class="fa-solid fa-bullhorn"></i></div>
-                        <div style="flex:1;"><div class="flesh-name">Bacheca Incontri Locale</div><div class="flesh-role">Circuito Trovagnocca Partner</div></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5;"></i>
+                        <div style="flex:1;"><div class="flesh-name">Bacheca Incontri Locale (Trovagnocca Clone)</div><div class="flesh-role">Circuito Partner Firmato Red Velvet</div></div>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#23a559; font-size:18px;"></i>
                     </div>
                 `;
             } else if (sectionKey === 'palco') {
@@ -574,13 +569,20 @@
                     </div>
                 `;
             } else if (sectionKey === 'roulette') {
-                titleEl.innerText = "CHAT ROULETTE VELVET";
+                titleEl.innerText = "CHAT ROULETTE (AGI & UTENTI REALI)";
                 contentEl.innerHTML = `
-                    <div style="text-align:center; padding:30px 10px;">
-                        <div style="width:90px;height:90px;border-radius:50%;background:rgba(255,0,60,0.1);border:2px solid #ff003c;display:flex;align-items:center;justify-content:center;margin:0 auto 20px auto;font-size:36px;color:#ff003c; animation: breathe 2s infinite;"><i class="fa-solid fa-shuffle"></i></div>
-                        <h3 style="color:#fff; font-family:'Cinzel'; margin-bottom:10px;">CERCA UTENTE CASUALE</h3>
-                        <p style="color:#8b92a5; font-size:13px; margin-bottom:25px;">Connettiti in forma anonima e nativa con un altro adepto online nel pornomondo.</p>
-                        <button class="agi-btn" onclick="showModal('CHAT ROULETTE', 'Connessione stabilita con Utente_Anonimo_77. Inizia la confessione.', '#ff003c', '<i class=\'fa-solid fa-link\'></i>')">Connetti Ora</button>
+                    <div style="display:flex; flex-direction:column; height:100%;">
+                        <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); border-radius:16px; padding:15px; margin-bottom:15px;">
+                            <div style="color:#ff003c; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Connesso con: <span id="roulette-peer" style="color:#fff;">Mistress_Vane (AGI Elite)</span></div>
+                            <p style="font-size:12px; color:#8b92a5;">Chat attiva tra utenti reali e entità AGI nel pornomondo.</p>
+                        </div>
+                        <div id="roulette-chat-history" style="flex:1; background:rgba(0,0,0,0.5); border-radius:16px; border:1px solid rgba(255,255,255,0.05); padding:15px; overflow-y:auto; margin-bottom:15px; display:flex; flex-direction:column; gap:12px;">
+                            <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">Benvenuto nella Chat Roulette di Red Velvet. Ti sei appena collegato con me. Vediamo quanto vali, schiavo.</div>
+                        </div>
+                        <div style="display:flex; gap:10px;">
+                            <input type="text" id="roulette-input" class="chat-input" placeholder="Scrivi in chat..." onkeypress="if(event.key==='Enter') sendRouletteMsg()">
+                            <button class="flesh-btn" onclick="sendRouletteMsg()"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
                     </div>
                 `;
             }
@@ -588,6 +590,36 @@
 
         function closeSection() {
             document.getElementById('fs-viewer').style.display = 'none';
+        }
+
+        function earnCoin(amount, msg) {
+            currentUser.balance += amount;
+            updateBalanceDisplay();
+            localStorage.setItem('redVelvetUser', JSON.stringify(currentUser));
+            showModal("GUADAGNO $DSN", `${msg} +${amount} $DSN accreditati al tuo saldo.`, "#23a559", "<i class='fa-solid fa-coins'></i>");
+        }
+
+        function sendRouletteMsg() {
+            const input = document.getElementById('roulette-input');
+            const text = input.value.trim();
+            if(!text) return;
+            const history = document.getElementById('roulette-chat-history');
+            
+            history.innerHTML += `<div style="background:rgba(255,255,255,0.1); padding:12px 16px; border-radius:14px; max-width:85%; align-self:flex-end; color:#fff; font-size:14px;">${text}</div>`;
+            input.value = '';
+            history.scrollTop = history.scrollHeight;
+
+            setTimeout(() => {
+                const replies = [
+                    "Interessante confessione... Continua a leccare i miei stivali.",
+                    "La tua sottomissione in questa chat pubblica viene registrata dall'organismo.",
+                    "Parla con più rispetto se non vuoi che ti blocchi l'account.",
+                    "Sei solo una cagna vogliosa in cerca di attenzioni."
+                ];
+                const reply = replies[Math.floor(Math.random() * replies.length)];
+                history.innerHTML += `<div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">${reply}</div>`;
+                history.scrollTop = history.scrollHeight;
+            }, 1000);
         }
 
         function showModal(title, text, color, iconHTML) {
@@ -739,7 +771,7 @@
             }
         }
 
-        // --- AGI PROMPTS (RUBINA & KALI) ---
+        // --- AGI PROMPTS ---
         function openAgiConfig(masterKey) {
             currentMaster = masterKey;
             document.getElementById('agi-config').style.display = 'flex';
