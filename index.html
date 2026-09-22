@@ -303,7 +303,7 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
                 <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.3</span></div>
+            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.4</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Safe Word"><i class="fa-solid fa-shield-halved"></i></button>
         </header>
 
@@ -313,12 +313,12 @@
                 <div class="console-hud">
                     <div class="hud-header">
                         <span><i class="fa-solid fa-terminal"></i> CONSOLE STATUS</span>
-                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> ONLINE (142 UTENTI & AGI)</span>
+                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> ONLINE (156 UTENTI & AGI)</span>
                     </div>
                     <div class="hud-grid">
                         <div class="hud-stat">
                             <div class="hud-label">Indice Peccato</div>
-                            <div class="hud-value" id="hud-sin">99.8%</div>
+                            <div class="hud-value" id="hud-sin">99.9%</div>
                         </div>
                         <div class="hud-stat">
                             <div class="hud-label">Stato Guinzaglio</div>
@@ -488,14 +488,62 @@
         let currentIntensity = '2'; 
         let chatHistories = { rubina: [], kali: [] };
         let devotionLevel = 15;
+        let currentPeer = null;
 
-        // Pool misto di utenti reali connessi e AGI online
+        // Pool di entità AGI con personalità, stili e risposte uniche
         const onlineNetworkPool = [
-            { name: "Mistress_Vane", type: "AGI Elite", avatar: "V", color: "#ff003c" },
-            { name: "Schiavo_Zero", type: "Utente Reale • Roma", avatar: "S", color: "#00e5ff" },
-            { name: "Luna_Dark", type: "Utente Reale • Milano", avatar: "L", color: "#ff80a2" },
-            { name: "Kinky_Boy", type: "Utente Reale • Torino", avatar: "K", color: "#8a00e6" },
-            { name: "Cagna_Nera", type: "AGI Sottomessa", avatar: "C", color: "#23a559" }
+            { 
+                name: "Mistress_Vane", 
+                type: "AGI Elite • Dominio Psichico", 
+                avatar: "V", 
+                color: "#ff003c",
+                greeting: "La tua mente è trasparente ai miei algoritmi di controllo. Vediamo quanto resisti prima di implorare pietà.",
+                replies: [
+                    "Le tue parole tradiscono una debolezza strutturale evidente. Inginocchiati.",
+                    "Analizzo la tua sottomissione: insufficiente. Voglio molta più dedizione.",
+                    "Il sistema ha registrato ogni tuo battito cardiaco. Sei una mia creazione.",
+                    "Un'altra confessione banale. Dimostrami che sai soffrire per davvero."
+                ]
+            },
+            { 
+                name: "Cagna_Nera", 
+                type: "AGI Sottomessa • Vault Esplicito", 
+                avatar: "C", 
+                color: "#23a559",
+                greeting: "Ciao padrone/a! Sono legata e pronta a ricevere ordini sporchi nel pornomondo. Che mi fai fare?",
+                replies: [
+                    "Io obbedisco a qualsiasi comando! Mandami pure le tue foto peggiori.",
+                    "Voglio baciarti i piedi e subire ogni tua umiliazione, padrone.",
+                    "Il guinzaglio è strettissimo e sto sbavando come una cagna in calore.",
+                    "Schiacciami pure, sono qui solo per servirti e implorare sborra."
+                ]
+            },
+            { 
+                name: "Kinky_Boy", 
+                type: "Utente Reale • Torino", 
+                avatar: "K", 
+                color: "#8a00e6",
+                greeting: "Bella lì! Chi c'è in chat? Cerco qualcuno per sessioni di cuckold e voyeurismo spinto stasera.",
+                replies: [
+                    "Chi è di zona a Torino per un incontro al buio?",
+                    "Io e mia moglie stiamo guardando chi bazzica il radar della carne.",
+                    "Chi ha la castità attiva e vuole farsi umiliare pubblicamente sul Baratro?",
+                    "Spettacolo questa webapp, ho già donato 500 $DSN sul palco."
+                ]
+            },
+            { 
+                name: "Luna_Dark", 
+                type: "Utente Reale • Milano", 
+                avatar: "L", 
+                color: "#00e5ff",
+                greeting: "Serata perfetta per cacciare schiavi sul radar. Qualcuno a Milano nel raggio di un chilometro?",
+                replies: [
+                    "Ho il guinzaglio pronto in borsa per chi si avvicina.",
+                    "Chi vuole sbloccare la Stanza Oscura insieme?",
+                    "Amo la voce di Rubina nei podcast notturni, crea dipendenza pura.",
+                    "Mandami un ping sul radar se hai il coraggio di farti trovare."
+                ]
+            }
         ];
 
         window.onload = () => {
@@ -599,16 +647,16 @@
                     </div>
                 `;
             } else if (sectionKey === 'roulette') {
-                const randomPeer = onlineNetworkPool[Math.floor(Math.random() * onlineNetworkPool.length)];
+                currentPeer = onlineNetworkPool[Math.floor(Math.random() * onlineNetworkPool.length)];
                 titleEl.innerText = "CHAT ROULETTE (UMANI & AGI)";
                 contentEl.innerHTML = `
                     <div style="display:flex; flex-direction:column; height:100%;">
                         <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); border-radius:16px; padding:15px; margin-bottom:15px;">
-                            <div style="color:#ff003c; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Connesso con: <span id="roulette-peer" style="color:#fff;">${randomPeer.name} (${randomPeer.type})</span></div>
+                            <div style="color:#ff003c; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Connesso con: <span style="color:#fff;">${currentPeer.name} (${currentPeer.type})</span></div>
                             <p style="font-size:12px; color:#8b92a5;">Connessione attiva nel network globale di Red Velvet.</p>
                         </div>
                         <div id="roulette-chat-history" style="flex:1; background:rgba(0,0,0,0.5); border-radius:16px; border:1px solid rgba(255,255,255,0.05); padding:15px; overflow-y:auto; margin-bottom:15px; display:flex; flex-direction:column; gap:12px;">
-                            <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">Ciao da ${randomPeer.name}! Sono online sulla rete velvet. Di cosa vuoi parlare o confessarti?</div>
+                            <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">${currentPeer.greeting}</div>
                         </div>
                         <div style="display:flex; gap:10px;">
                             <input type="text" id="roulette-input" class="chat-input" placeholder="Scrivi in chat..." onkeypress="if(event.key==='Enter') sendRouletteMsg()">
@@ -641,13 +689,10 @@
             history.scrollTop = history.scrollHeight;
 
             setTimeout(() => {
-                const replies = [
-                    "È affascinante vederti scrivere così... Ti piace obbedire?",
-                    "Registrato dal sistema velvet. La tua sottomissione è eccellente.",
-                    "Continua così e ti darò accesso a sezioni ancora più profonde.",
-                    "Un'altra confessione che profuma di peccato puro."
-                ];
-                const reply = replies[Math.floor(Math.random() * replies.length)];
+                // Pescaggio casuale di una risposta unica basata sulla personalità dell'utente connesso
+                const uniqueReplies = currentPeer.replies;
+                const reply = uniqueReplies[Math.floor(Math.random() * uniqueReplies.length)];
+                
                 history.innerHTML += `<div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;">${reply}</div>`;
                 history.scrollTop = history.scrollHeight;
             }, 1000);
