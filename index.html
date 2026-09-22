@@ -22,11 +22,11 @@
 
         /* HEADER */
         header { height: 75px; background: rgba(2, 1, 4, 0.85); backdrop-filter: blur(25px); border-bottom: 1px solid rgba(255, 0, 60, 0.2); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; flex-shrink: 0; z-index: 10; padding-top: env(safe-area-inset-top); }
-        .logo-box { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #ff003c, #8a00e6); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(255, 0, 60, 0.4); cursor: pointer; }
+        .logo-box { width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(135deg, #ff003c, #8a00e6); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(255, 0, 60, 0.4); cursor: pointer; flex-shrink: 0; }
         .header-title { display: flex; flex-direction: column; align-items: center; pointer-events: none;}
         .header-title h1 { font-family: 'Cinzel', serif; font-size: 18px; color: #fff; letter-spacing: 4px; font-weight: 900;}
         .header-title span { font-size: 9px; color: #ff80a2; text-transform: uppercase; letter-spacing: 3px; font-weight: 800;}
-        .icon-btn { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,0,60,0.3); background: rgba(255,0,60,0.1); color: #ff003c; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 0 10px rgba(255,0,60,0.2);}
+        .icon-btn { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,0,60,0.3); background: rgba(255,0,60,0.1); color: #ff003c; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 0 10px rgba(255,0,60,0.2); flex-shrink: 0;}
 
         main { flex: 1; overflow-y: auto; padding: 25px 20px 20px 20px; z-index: 2; display: flex; flex-direction: column;}
         main::-webkit-scrollbar { display: none; }
@@ -50,7 +50,7 @@
         .master-card.rubina { border-left: 3px solid #ff003c; box-shadow: 0 15px 30px rgba(0,0,0,0.6), inset 20px 0 50px -20px rgba(255, 0, 60, 0.15); }
         .master-card.kali { border-left: 3px solid #00e5ff; box-shadow: 0 15px 30px rgba(0,0,0,0.6), inset 20px 0 50px -20px rgba(0, 229, 255, 0.15); }
         .mc-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
-        .master-icon { width: 64px; height: 64px; border-radius: 50%; background: #000; display: flex; align-items: center; justify-content: center; font-size: 28px; border: 2px solid rgba(255,255,255,0.1);}
+        .master-icon { width: 64px; height: 64px; border-radius: 50%; background: #000; display: flex; align-items: center; justify-content: center; font-size: 28px; border: 2px solid rgba(255,255,255,0.1); flex-shrink: 0;}
         .rubina .master-icon { color: #ff003c; filter: drop-shadow(0 0 15px rgba(255,0,60,0.8)); }
         .kali .master-icon { color: #00e5ff; filter: drop-shadow(0 0 15px rgba(0,229,255,0.8)); }
         .master-name { font-family: 'Cinzel', serif; color: #fff; font-size: 24px; font-weight: 900; letter-spacing: 2px; }
@@ -71,10 +71,20 @@
         .radar-text { margin-top: 20px; font-size: 11px; color: #ff80a2; text-transform: uppercase; letter-spacing: 3px; font-weight: 800; text-align: center;}
         
         .flesh-card { background: rgba(15, 10, 15, 0.8); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 20px; display: flex; align-items: center; gap: 15px; margin-bottom:15px;}
-        .flesh-avatar { width: 56px; height: 56px; border-radius: 14px; background: #000; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #ff003c; border: 1px solid rgba(255,0,60,0.3); }
+        .flesh-avatar { width: 56px; height: 56px; border-radius: 14px; background: #000; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #ff003c; border: 1px solid rgba(255,0,60,0.3); flex-shrink: 0; }
         .flesh-name { color: #fff; font-size: 18px; font-weight: 800; }
         .flesh-role { font-size: 11px; color: #8b92a5; text-transform: uppercase; font-weight: 700; margin-top: 4px;}
-        .flesh-btn { background: rgba(255,0,60,0.1); color: #ff003c; border: 1px solid rgba(255,0,60,0.4); padding: 10px 16px; border-radius: 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; cursor: pointer;}
+        .flesh-btn { background: rgba(255,0,60,0.1); color: #ff003c; border: 1px solid rgba(255,0,60,0.4); padding: 10px 16px; border-radius: 12px; font-size: 11px; font-weight: 800; text-transform: uppercase; cursor: pointer; flex-shrink: 0;}
+
+        /* FEED & VOYEUR POLISHED */
+        .feed-post { background: rgba(15, 12, 18, 0.9); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 20px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .feed-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .feed-avatar { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; flex-shrink: 0; background: #000; border: 2px solid rgba(255,0,60,0.4); color: #ff003c; }
+        .feed-name { color: #fff; font-size: 16px; font-weight: 800; }
+        .feed-time { font-size: 10px; color: #8b92a5; text-transform: uppercase; margin-top: 2px;}
+        .feed-content { color: #d1d5df; font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
+        .voyeur-snippet { background: rgba(0,0,0,0.6); border-left: 3px solid #ff003c; padding: 15px; border-radius: 12px; margin-top: 15px; font-family: monospace; font-size: 13px; line-height: 1.5;}
+        .feed-actions { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 15px; gap: 10px; }
 
         /* ANTRO */
         .manga-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -293,7 +303,7 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Console Esplora">
                 <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.0</span></div>
+            <div class="header-title"><h1>RED VELVET</h1><span>Console AGI v4.1</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Safe Word"><i class="fa-solid fa-shield-halved"></i></button>
         </header>
 
@@ -308,7 +318,7 @@
                     <div class="hud-grid">
                         <div class="hud-stat">
                             <div class="hud-label">Indice Peccato</div>
-                            <div class="hud-value" id="hud-sin">96.2%</div>
+                            <div class="hud-value" id="hud-sin">98.1%</div>
                         </div>
                         <div class="hud-stat">
                             <div class="hud-label">Stato Guinzaglio</div>
@@ -358,7 +368,7 @@
                 <div class="section-title">Feed Voyeur</div>
                 <div class="feed-post" style="border-color: rgba(255,0,60,0.4); box-shadow: inset 0 0 20px rgba(255,0,60,0.05);">
                     <div class="feed-header">
-                        <div class="feed-avatar" style="background:#000; color:#ff003c; border: 1px solid #ff003c;"><i class="fa-solid fa-eye"></i></div>
+                        <div class="feed-avatar"><i class="fa-solid fa-eye"></i></div>
                         <div style="flex:1;"><div class="feed-name">Voyeur Log: Anon_88</div><div class="feed-time">Reso pubblico 5 minuti fa</div></div>
                     </div>
                     <div class="feed-content">
@@ -499,7 +509,7 @@
             }
         }
 
-        // --- FULLSCREEN SECTIONS (PODCAST CON LIKE COIN & $DSN, ANNUNCI TROVAAGNOCCA, CHAT ROULETTE AGI & UMANI) ---
+        // --- FULLSCREEN SECTIONS (POLISHED UI & REAL REDIRECTS) ---
         function openSection(sectionKey) {
             toggleSideMenu();
             const viewer = document.getElementById('fs-viewer');
@@ -509,13 +519,13 @@
             contentEl.innerHTML = '';
 
             if (sectionKey === 'podcast') {
-                titleEl.innerText = "PODCAST DI RUBINA (GUADAGNA $DSN)";
+                titleEl.innerText = "PODCAST DI RUBINA";
                 contentEl.innerHTML = `
                     <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Ascolta le tracce, lascia Like, commenti utili o condividi per accumulare Like Coin convertibili in $DSN:</p>
-                    <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); border-radius:20px; padding:20px; margin-bottom:15px;">
-                        <h3 style="color:#ff003c; font-family:'Cinzel'; margin-bottom:10px;"><i class="fa-solid fa-podcast"></i> Traccia 01: Sottomissione Totale</h3>
+                    <div style="background:rgba(255,0,60,0.08); border:1px solid rgba(255,0,60,0.25); border-radius:20px; padding:20px; margin-bottom:15px; box-shadow:0 10px 30px rgba(0,0,0,0.4);">
+                        <h3 style="color:#ff003c; font-family:'Cinzel'; margin-bottom:10px; font-size:16px;"><i class="fa-solid fa-podcast"></i> Traccia 01: Sottomissione Totale</h3>
                         <p style="font-size:14px; line-height:1.5; color:#ffb3c6; margin-bottom:15px;">Monologo di Rubina sul controllo mentale e la sottomissione assoluta.</p>
-                        <div style="display:flex; gap:10px;">
+                        <div style="display:flex; gap:10px; flex-wrap:wrap;">
                             <button class="flesh-btn" onclick="earnCoin(50, 'Ascolto completato! +50 Like Coin convertiti in $DSN.')"><i class="fa-solid fa-headphones"></i> Ascolta (+50)</button>
                             <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="earnCoin(25, 'Like registrato! +25 $DSN.')"><i class="fa-solid fa-heart"></i> Like</button>
                             <button class="flesh-btn" style="color:#8a00e6; border-color:#8a00e6; background:rgba(138,0,230,0.1);" onclick="earnCoin(30, 'Condivisione riuscita! +30 $DSN.')"><i class="fa-solid fa-share"></i> Condividi</button>
@@ -529,7 +539,7 @@
                     <div class="flesh-card" onclick="window.open('https://www.gutenberg.org', '_blank')">
                         <div class="flesh-avatar" style="color:#ff003c;"><i class="fa-solid fa-book"></i></div>
                         <div style="flex:1;"><div class="flesh-name">Archivio Erotico Classico</div><div class="flesh-role">Biblioteca estera gratuita</div></div>
-                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5;"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square" style="color:#8b92a5; font-size:18px;"></i>
                     </div>
                 `;
             } else if (sectionKey === 'lettura') {
@@ -537,7 +547,13 @@
                 contentEl.innerHTML = `
                     <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Racconti e confessioni dei creator di Red Velvet. Vota o condividi:</p>
                     <div class="feed-post">
-                        <div class="feed-header"><div class="feed-avatar" style="background:#ff003c; color:#fff;">K</div><div style="flex:1;"><div class="feed-name">Kali_Master</div><div class="feed-time">2 ore fa</div></div></div>
+                        <div class="feed-header">
+                            <div class="feed-avatar">K</div>
+                            <div style="flex:1;">
+                                <div class="feed-name">Kali_Master</div>
+                                <div class="feed-time">2 ore fa</div>
+                            </div>
+                        </div>
                         <div class="feed-content">"Il vero potere su uno schiavo non si ottiene con le percosse, ma convincendolo che la sua unica ragione di vita è obbedire."</div>
                         <div class="feed-actions">
                             <button class="flesh-btn" onclick="showModal('VOTATO', 'Hai votato questo pensiero con 1 Cuore Nero.', '#ff003c', '<i class=\'fa-solid fa-heart\'></i>')"><i class="fa-solid fa-heart"></i> Vota (42)</button>
@@ -549,7 +565,7 @@
                 titleEl.innerText = "ANNUNCI RED VELVET (TROVAGNOCCA CLONE)";
                 contentEl.innerHTML = `
                     <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Reindirizzamento ufficiale firmato al nostro circuito di incontri e annunci reali:</p>
-                    <div class="flesh-card" onclick="window.open('https://it.adultsearch.com', '_blank')">
+                    <div class="flesh-card" onclick="window.open('https://it.adpost.com/classifieds/personals/', '_blank')">
                         <div class="flesh-avatar" style="color:#23a559;"><i class="fa-solid fa-bullhorn"></i></div>
                         <div style="flex:1;"><div class="flesh-name">Bacheca Incontri Locale (Trovagnocca Clone)</div><div class="flesh-role">Circuito Partner Firmato Red Velvet</div></div>
                         <i class="fa-solid fa-arrow-up-right-from-square" style="color:#23a559; font-size:18px;"></i>
@@ -560,10 +576,16 @@
                 contentEl.innerHTML = `
                     <p style="color:#8b92a5; font-size:13px; margin-bottom:15px;">Posta foto/video e ricevi donazioni $DSN dagli spettatori:</p>
                     <div class="feed-post">
-                        <div class="feed-header"><div class="feed-avatar" style="background:#8a00e6; color:#fff;">S</div><div style="flex:1;"><div class="feed-name">Schiava_Milano</div><div class="feed-time">10 min fa</div></div></div>
+                        <div class="feed-header">
+                            <div class="feed-avatar" style="color:#8a00e6; border-color:#8a00e6;">S</div>
+                            <div style="flex:1;">
+                                <div class="feed-name">Schiava_Milano</div>
+                                <div class="feed-time">10 min fa</div>
+                            </div>
+                        </div>
                         <div class="feed-content">"Sotto i portici in attesa di ordini. Guinzaglio stretto."<br><div style="background:#000; height:120px; border-radius:12px; margin-top:10px; display:flex; align-items:center; justify-content:center; color:#ff003c;"><i class="fa-solid fa-image" style="font-size:40px;"></i></div></div>
                         <div class="feed-actions">
-                            <button class="flesh-btn" onclick="buyFeature(100, 'Hai donato 100 $DSN alla performance.')"><i class="fa-solid fa-coins"></i> Dona 100 $DSN</button>
+                            <button class="flesh-btn" onclick="buyFeature(100, 'Hai donato 100 $DSN alla performance.')"><i class="fa-solid fa-coins"></i> Dona 100</button>
                             <button class="flesh-btn" style="color:#00e5ff; border-color:#00e5ff; background:rgba(0,229,255,0.1);" onclick="showModal('VOTATO', 'Hai votato il Palco.', '#00e5ff', '<i class=\'fa-solid fa-star\'></i>')">Vota</button>
                         </div>
                     </div>
