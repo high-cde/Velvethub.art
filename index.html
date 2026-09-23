@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#020104">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>THE SIN SYNDICATE | Openclaw AGI Civilization Hub</title>
+    <title>THE SIN SYNDICATE | Live AGI Civilization WebSocket</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/socket.io/socket.io.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;800;900&family=Cinzel:wght@600;700;900&family=Share+Tech+Mono&display=swap');
 
@@ -244,7 +245,7 @@
     <div id="splash">
         <div class="logo-box" style="width:90px; height:90px; font-size:40px; box-shadow:none;"><i class="fa-solid fa-moon" style="color:#fff;"></i></div>
         <h1 style="font-family:'Cinzel'; color:#fff; font-size:26px; letter-spacing:6px; margin-top:30px;">THE SIN SYNDICATE</h1>
-        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:3px; margin-top:10px;">OPENCLAW CIVILIZATION NEXUS</p>
+        <p style="color:#ff80a2; font-size:11px; font-weight:800; letter-spacing:3px; margin-top:10px;">WEBSOCKET AGI CIVILIZATION</p>
     </div>
 
     <!-- AUTH EVOLVED -->
@@ -301,7 +302,7 @@
             <div class="logo-box" onclick="toggleSideMenu()" title="Nexus & Civiltà">
                 <i class="fa-solid fa-moon" style="color:white; font-size:20px;"></i>
             </div>
-            <div class="header-title"><h1>SYNNDICATE</h1><span>Civilization v7.3</span></div>
+            <div class="header-title"><h1>SYNNDICATE</h1><span>WebSocket v8.0</span></div>
             <button class="icon-btn" onclick="document.getElementById('panic-screen').style.display='flex'" title="Stealth Panic"><i class="fa-solid fa-user-secret"></i></button>
         </header>
 
@@ -310,8 +311,8 @@
                 
                 <div class="console-hud">
                     <div class="hud-header">
-                        <span><i class="fa-solid fa-satellite-dish"></i> CIVILTÀ AGI & UTENTI</span>
-                        <span style="color:#23a559;"><i class="fa-solid fa-circle" style="font-size:7px;"></i> 34 ONLINE / 26 OFFLINE</span>
+                        <span><i class="fa-solid fa-satellite-dish"></i> WEBSOCKET NETWORK AGI</span>
+                        <span style="color:#23a559;" id="live-stats-badge"><i class="fa-solid fa-circle" style="font-size:7px;"></i> 34 ONLINE / 26 OFFLINE</span>
                     </div>
                     <div class="hud-grid">
                         <div class="hud-stat">
@@ -417,7 +418,7 @@
                         <span class="badge-chip">Collarizzato</span>
                         <span class="badge-chip">GPS Active</span>
                         <span class="badge-chip">DSN Holder</span>
-                        <span class="badge-chip">Civiltà AGI</span>
+                        <span class="badge-chip">WebSocket Active</span>
                     </div>
                 </div>
 
@@ -501,6 +502,7 @@
     <script>
         const GEMINI_API_KEY = "INSERISCI_QUI_LA_TUA_CHIAVE"; 
         
+        let socket = null;
         let currentUser = null;
         let currentMaster = '';
         let currentIntensity = '2'; 
@@ -515,12 +517,23 @@
         ];
 
         window.onload = () => {
+            initWebSocket();
             initGPS();
             setTimeout(() => {
                 document.getElementById('splash').style.opacity = '0';
                 setTimeout(() => { document.getElementById('splash').style.display = 'none'; checkAuth(); }, 500);
             }, 800);
         };
+
+        function initWebSocket() {
+            socket = io();
+            socket.on('statsUpdate', (data) => {
+                document.getElementById('live-stats-badge').innerHTML = `<i class="fa-solid fa-circle" style="font-size:7px;"></i> ${data.online} ONLINE / ${data.offline} OFFLINE`;
+            });
+            socket.on('openclawMessage', (msg) => {
+                appendOpenclawUI(msg.sender, msg.text, msg.role);
+            });
+        }
 
         function initGPS() {
             if (navigator.geolocation) {
@@ -549,26 +562,25 @@
             }
         }
 
-        // CHAT APERTA OPENCLAW BAKEKA
+        // OPENCLAW BAKEKA WEBSOCKET LIVE CHAT
         function openOpenclawChat() {
             toggleSideMenu();
             const viewer = document.getElementById('fs-viewer');
             const titleEl = document.getElementById('fs-title');
             const contentEl = document.getElementById('fs-content');
             viewer.style.display = 'flex';
-            titleEl.innerText = "OPENCLAW BAKEKA (CHAT PUBBLICA)";
+            titleEl.innerText = "OPENCLAW BAKEKA (CHAT WEBSOCKET)";
             contentEl.innerHTML = `
                 <div style="display:flex; flex-direction:column; height:100%;">
                     <div style="background:rgba(0,229,255,0.1); border:1px solid rgba(0,229,255,0.3); border-radius:16px; padding:15px; margin-bottom:15px;">
-                        <div style="color:#00e5ff; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Agorà Civiltà Syndicate (34 Online / 26 Offline)</div>
-                        <p style="font-size:12px; color:#8b92a5;">Presentati per la prima volta, trova partner o discuti le regole della civiltà AGI.</p>
+                        <div style="color:#00e5ff; font-weight:800; font-size:13px; margin-bottom:5px;"><i class="fa-solid fa-circle" style="font-size:8px;"></i> Agorà Civiltà Reale (Live WebSocket)</div>
+                        <p style="font-size:12px; color:#8b92a5;">Parla in tempo reale con gli altri umani collegati su ` + window.location.host + `.</p>
                     </div>
                     <div id="openclaw-history" style="flex:1; background:rgba(0,0,0,0.5); border-radius:16px; border:1px solid rgba(255,255,255,0.05); padding:15px; overflow-y:auto; margin-bottom:15px; display:flex; flex-direction:column; gap:12px;">
-                        <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;"><strong>Rubina_AGI:</strong> Benvenuti fondatori nella civiltà del Syndicate. Presentatevi e dichiarate la vostra devozione.</div>
-                        <div style="background:rgba(0,229,255,0.1); border:1px solid rgba(0,229,255,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#b3faff; font-size:14px;"><strong>Schiavo_Milano:</strong> Ciao a tutti! Sono nuovo, cerco coppia master in zona Milano per sottomissione.</div>
+                        <div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;"><strong>Rubina_AGI:</strong> Connessione WebSocket attiva. La civiltà prende vita. Parlate tra voi.</div>
                     </div>
                     <div style="display:flex; gap:10px;">
-                        <input type="text" id="openclaw-input" class="chat-input" placeholder="Presentati o cerca partner..." onkeypress="if(event.key==='Enter') sendOpenclawMsg()">
+                        <input type="text" id="openclaw-input" class="chat-input" placeholder="Parla con gli altri umani..." onkeypress="if(event.key==='Enter') sendOpenclawMsg()">
                         <button class="flesh-btn" onclick="sendOpenclawMsg()"><i class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </div>
@@ -579,23 +591,18 @@
             const input = document.getElementById('openclaw-input');
             const text = input.value.trim();
             if(!text) return;
-            const history = document.getElementById('openclaw-history');
-            
-            history.innerHTML += `<div style="background:rgba(255,255,255,0.1); padding:12px 16px; border-radius:14px; max-width:85%; align-self:flex-end; color:#fff; font-size:14px;"><strong>${currentUser.alias}:</strong> ${text}</div>`;
+            socket.emit('openclawMessage', { sender: currentUser.alias, role: currentUser.role, text: text });
             input.value = '';
-            history.scrollTop = history.scrollHeight;
+        }
 
-            setTimeout(() => {
-                const civicReplies = [
-                    "Benvenuto nella civiltà del Syndicate! Il tuo messaggio è stato registrato nel ledger.",
-                    "Ottima presentazione. Cerca sul Flesh-Radar chi si trova vicino a te.",
-                    "Il Consiglio AGI ha approvato la tua entrata nel network. Obedisci alle regole.",
-                    "Partner trovato! Controlla i messaggi crittografati nella bacheca."
-                ];
-                const reply = civicReplies[Math.floor(Math.random() * civicReplies.length)];
-                history.innerHTML += `<div style="background:rgba(255,0,60,0.1); border:1px solid rgba(255,0,60,0.3); padding:12px 16px; border-radius:14px; max-width:85%; color:#ffb3c6; font-size:14px;"><strong>Syndicate_Node:</strong> ${reply}</div>`;
-                history.scrollTop = history.scrollHeight;
-            }, 1000);
+        function appendOpenclawUI(sender, text, role) {
+            const history = document.getElementById('openclaw-history');
+            if(!history) return;
+            const isMe = currentUser && sender === currentUser.alias;
+            const bg = isMe ? 'rgba(255,255,255,0.1)' : 'rgba(255,0,60,0.1)';
+            const align = isMe ? 'align-self:flex-end;' : 'align-self:flex-start;';
+            history.innerHTML += `<div style="background:${bg}; ${align} padding:12px 16px; border-radius:14px; max-width:85%; color:#fff; font-size:14px;"><strong>${sender}</strong> <span style="font-size:9px; color:#8b92a5;">[${role || 'Adepto'}]</span><br>${text}</div>`;
+            history.scrollTop = history.scrollHeight;
         }
 
         function openSection(sectionKey) {
@@ -717,10 +724,34 @@
         }
         function closeModal() { document.getElementById('custom-modal-overlay').classList.remove('active'); setTimeout(() => document.getElementById('custom-modal-overlay').style.display = 'none', 300); }
         function triggerScreenShake() { const app = document.getElementById('main-app'); app.classList.add('shake-active'); setTimeout(() => app.classList.remove('shake-active'), 500); }
-        function checkAuth() { const savedUser = localStorage.getItem('redVelvetUser'); if (savedUser) { currentUser = JSON.parse(savedUser); launchApp(); } else { document.getElementById('auth-overlay').classList.add('active'); } }
-        function handleGoogleAuth() { currentUser = { alias: "Syndicate_" + Math.floor(Math.random()*1000), role: "Schiavo / Adepto", balance: 10000, bio: "", link: "" }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
-        function handleAuth(e) { e.preventDefault(); currentUser = { alias: document.getElementById('reg-alias').value, role: document.getElementById('reg-role').value, balance: 10000, bio: "", link: "" }; localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); document.getElementById('auth-overlay').classList.remove('active'); launchApp(); }
+        
+        function checkAuth() { 
+            const savedUser = localStorage.getItem('redVelvetUser'); 
+            if (savedUser) { 
+                currentUser = JSON.parse(savedUser); 
+                launchApp(); 
+            } else { 
+                document.getElementById('auth-overlay').classList.add('active'); 
+            } 
+        }
+        
+        function handleGoogleAuth() { 
+            currentUser = { alias: "Syndicate_" + Math.floor(Math.random()*1000), role: "Schiavo / Adepto", balance: 10000, bio: "", link: "" }; 
+            localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); 
+            document.getElementById('auth-overlay').classList.remove('active'); 
+            launchApp(); 
+        }
+        
+        function handleAuth(e) { 
+            e.preventDefault(); 
+            currentUser = { alias: document.getElementById('reg-alias').value, role: document.getElementById('reg-role').value, balance: 10000, bio: "", link: "" }; 
+            localStorage.setItem('redVelvetUser', JSON.stringify(currentUser)); 
+            document.getElementById('auth-overlay').classList.remove('active'); 
+            launchApp(); 
+        }
+        
         function logout() { localStorage.removeItem('redVelvetUser'); location.reload(); }
+        
         function launchApp() { 
             document.getElementById('main-app').style.opacity = '1'; 
             document.getElementById('user-alias-display').innerText = currentUser.alias; 
@@ -728,7 +759,9 @@
             if(currentUser.bio) document.getElementById('profile-bio').value = currentUser.bio;
             if(currentUser.link) document.getElementById('profile-link').value = currentUser.link;
             updateBalanceDisplay(); 
+            if(socket) socket.emit('joinSyndicate', currentUser);
         }
+
         function updateBalanceDisplay() { document.getElementById('display-balance').innerText = currentUser.balance; }
         function switchTab(tabId) { document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active')); document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active')); document.getElementById('tab-' + tabId).classList.add('active'); event.currentTarget.classList.add('active'); }
         function toggleCuckold() { showModal("VOYEUR", "Modalità Voyeur attiva nel Syndicate.", "#ff003c", "<i class='fa-solid fa-video'></i>"); }
